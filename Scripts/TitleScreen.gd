@@ -1,4 +1,6 @@
-extends Control
+# this scene exhibits the main user interface of the title scene
+# the title scene is called "title.tscn"
+extends Node
 
 
 
