@@ -1,7 +1,0 @@
-[gd_scene format=3 uid="uid://feljm6kbiw12"]
-
-[node name="Hud" type="CanvasLayer" unique_id=1693847382]
-
-[node name="StartButton" type="Button" parent="." unique_id=1555521203]
-offset_right = 8.0
-offset_bottom = 8.0
