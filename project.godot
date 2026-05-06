@@ -12,6 +12,7 @@ config_version=5
 
 config/name="mamasSustaineria"
 config/tags=PackedStringArray("academics")
+run/main_scene="uid://bgbtl5x6knd2m"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
