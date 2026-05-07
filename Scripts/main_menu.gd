@@ -20,4 +20,4 @@ func _on_credits_pressed() -> void:
 
 
 func _on_manual_pressed() -> void:
-	pass # Replace with function body.
+	get_tree().change_scene("res://Scenes/Main/Instructions.tscn")
