@@ -53,3 +53,5 @@ script = ExtResource("1_forwa")
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
+
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
