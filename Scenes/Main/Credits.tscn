@@ -1,3 +1,7 @@
-[gd_scene format=3 uid="uid://1g6fv0tdk7ox"]
+[gd_scene format=3 uid="uid://bm48u2luyiwwd"]
 
 [node name="Credits" type="Node2D" unique_id=2044604102]
+
+[node name="Panel" type="Panel" parent="." unique_id=1875139365]
+offset_right = 1152.0
+offset_bottom = 648.0
