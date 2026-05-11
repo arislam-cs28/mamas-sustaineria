@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://bm48u2luyiwwd"]
 
+[ext_resource type="Script" uid="uid://dln3u4um1esjh" path="res://Scenes/Main/credits.gd" id="1_rfphu"]
+
 [node name="Credits" type="Node2D" unique_id=2044604102]
+script = ExtResource("1_rfphu")
 
 [node name="Panel" type="Panel" parent="." unique_id=1875139365]
 offset_right = 1152.0
@@ -31,3 +34,13 @@ Coded by Mallory Brennan and Arisha Islam
 Music by Maggie Chen"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=295449044]
+offset_left = 30.0
+offset_top = 578.0
+offset_right = 90.0
+offset_bottom = 614.0
+theme_override_font_sizes/font_size = 20
+text = "BACK"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://dg0gy3iowyc5d"]
 
+[ext_resource type="Script" uid="uid://bsanqvn4v7u71" path="res://Scenes/Main/instructions.gd" id="1_i2yq2"]
+
 [node name="Instructions" type="Node2D" unique_id=644979055]
+script = ExtResource("1_i2yq2")
 
 [node name="Panel" type="Panel" parent="." unique_id=116348451]
 offset_right = 1152.0
@@ -27,3 +30,13 @@ theme_override_font_sizes/normal_font_size = 33
 text = "type out instructions here"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=479659566]
+offset_left = 38.0
+offset_top = 557.0
+offset_right = 124.0
+offset_bottom = 607.0
+theme_override_font_sizes/font_size = 30
+text = "BACK"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
