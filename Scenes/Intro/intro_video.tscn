@@ -1,12 +1,17 @@
 [gd_scene format=3 uid="uid://b7j6ncjtd2dn2"]
 
-[ext_resource type="Script" uid="uid://bsbyfcnlgmptc" path="res://Scripts/intro_video.gd" id="1_tyxdc"]
+[sub_resource type="GDScript" id="GDScript_gje17"]
+script/source = "extends Node2D
+
+func _on_video_stream_player_finished() -> void:
+	pass # Replace with function body.
+"
 
 [sub_resource type="VideoStreamTheora" id="VideoStreamTheora_gje17"]
 file = "res://Videos/vid.ogv"
 
 [node name="IntroVideo" type="Node2D" unique_id=517494704]
-script = ExtResource("1_tyxdc")
+script = SubResource("GDScript_gje17")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=197667678]
 
