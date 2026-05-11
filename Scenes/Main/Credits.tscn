@@ -40,7 +40,7 @@ offset_left = 30.0
 offset_top = 578.0
 offset_right = 90.0
 offset_bottom = 614.0
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 30
 text = "BACK"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
