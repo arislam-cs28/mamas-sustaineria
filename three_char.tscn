@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://cisvo53bcok15"]
+
+[ext_resource type="Texture2D" uid="uid://beh54v4wda32d" path="res://Characters/ch3.png" id="1_bds64"]
+[ext_resource type="Texture2D" uid="uid://d0lv0kthvvj7s" path="res://Characters/ch31.png" id="2_3vyqc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_aaqw0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_bds64")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_3vyqc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bds64"]
+radius = 56.0
+height = 144.0
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=989711246]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1019328551]
+sprite_frames = SubResource("SpriteFrames_aaqw0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=814485088]
+position = Vector2(-8, -8)
+shape = SubResource("CapsuleShape2D_bds64")
