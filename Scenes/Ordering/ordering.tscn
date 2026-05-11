@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://bbuaiw5u0tcvv"]
 
 [ext_resource type="Texture2D" uid="uid://vhiv0ry18iva" path="res://Sprites/Backgrounds/order.png" id="1_cgp7d"]
+[ext_resource type="PackedScene" uid="uid://c5md6cdvg37u0" path="res://Characters/chara.tscn" id="2_r20fn"]
+[ext_resource type="Script" uid="uid://drvwfc7su13tw" path="res://Characters/chara.gd" id="3_unulo"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k5t1g"]
 texture = ExtResource("1_cgp7d")
@@ -23,3 +25,7 @@ offset_bottom = 142.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 80
 text = "order screen"
+
+[node name="CharacterBody2D" parent="." unique_id=1137176941 instance=ExtResource("2_r20fn")]
+position = Vector2(824, 328)
+script = ExtResource("3_unulo")
