@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dqtfgo8l7yvnj"]
+
+[sub_resource type="GDScript" id="GDScript_1h8w1"]
+script/source = "extends PanelContainer
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+func set_order_text(color_name: String):
+	Label.text = \"ORDER:\\n1x \" + color_name + \" Plastic\"
+"
+
+[node name="ActuallyOrdering" type="Node2D" unique_id=2114985535]
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1347904280]
+offset_left = 904.0
+offset_top = 2.0
+offset_right = 1152.0
+offset_bottom = 422.0
+script = SubResource("GDScript_1h8w1")
+
+[node name="Label" type="Label" parent="PanelContainer" unique_id=1067680552]
+layout_mode = 2

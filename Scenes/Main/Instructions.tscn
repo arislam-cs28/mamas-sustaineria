@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dg0gy3iowyc5d"]
 
-[ext_resource type="Script" uid="uid://bsanqvn4v7u71" path="res://Scripts/instructions.gd" id="1_i2yq2"]
+[ext_resource type="Script" path="res://Scripts/instructions.gd" id="1_i2yq2"]
 
 [node name="Instructions" type="Node2D" unique_id=644979055]
 script = ExtResource("1_i2yq2")
@@ -22,20 +22,22 @@ theme_override_font_sizes/font_size = 80
 text = "Instructions: "
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=776551942]
-offset_left = 180.0
-offset_top = 86.0
-offset_right = 921.0
-offset_bottom = 505.0
-theme_override_font_sizes/normal_font_size = 33
-text = "type out instructions here"
+offset_left = 107.0
+offset_top = 90.0
+offset_right = 997.0
+offset_bottom = 613.0
+theme_override_font_sizes/normal_font_size = 29
+text = "Welcome to Mama's Sustaineria!
+To begin the game, hit \"Play!\" on the Main Screen.
+Once started, a video will pop up on how Reese Syckle landed this terrific job. You will then be brought to an order screen. Once a player places their order, use the buttons at the bottom of the screen to recycle the plastic and return it to the player in their chosen color. You will be awarded points (stars) based on how well you followed the plastic recyling process. Good luck and get those stars! Please refer to the offical manual for plastic recyling protocol."
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Button" type="Button" parent="." unique_id=479659566]
-offset_left = 38.0
-offset_top = 557.0
-offset_right = 124.0
-offset_bottom = 607.0
+offset_left = 23.0
+offset_top = 584.0
+offset_right = 109.0
+offset_bottom = 634.0
 theme_override_font_sizes/font_size = 30
 text = "BACK"
 
