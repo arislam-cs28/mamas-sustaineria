@@ -1,16 +1,10 @@
-[gd_scene format=3 uid="uid://bbuaiw5u0tcvv"]
-
-[ext_resource type="Texture2D" uid="uid://vhiv0ry18iva" path="res://Sprites/Backgrounds/order.png" id="1_cgp7d"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k5t1g"]
-texture = ExtResource("1_cgp7d")
+[gd_scene format=3 uid="uid://mre2mlrqm3wq"]
 
 [node name="Ordering" type="Node2D" unique_id=123447793]
 
 [node name="Panel" type="Panel" parent="." unique_id=1029991555]
 offset_right = 1152.0
 offset_bottom = 648.0
-theme_override_styles/panel = SubResource("StyleBoxTexture_k5t1g")
 
 [node name="Label" type="Label" parent="." unique_id=1947241931]
 anchors_preset = 5
