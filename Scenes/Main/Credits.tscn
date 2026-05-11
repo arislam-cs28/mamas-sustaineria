@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bm48u2luyiwwd"]
 
-[ext_resource type="Script" uid="uid://dln3u4um1esjh" path="res://Scenes/Main/credits.gd" id="1_rfphu"]
+[ext_resource type="Script" uid="uid://dln3u4um1esjh" path="res://Scripts/credits.gd" id="1_rfphu"]
 
 [node name="Credits" type="Node2D" unique_id=2044604102]
 script = ExtResource("1_rfphu")

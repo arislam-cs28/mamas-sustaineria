@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://b7j6ncjtd2dn2"]
 
 [ext_resource type="Script" uid="uid://bsbyfcnlgmptc" path="res://Scenes/Intro/intro_video.gd" id="1_1u2e1"]
-[ext_resource type="VideoStream" uid="uid://ck2cqxibylxof" path="res://Scripts/Movie on 5-11-26 at 5.25 PM 2.ogv" id="2_anetg"]
+
+[sub_resource type="VideoStreamTheora" id="VideoStreamTheora_1u2e1"]
+file = "res://Scripts/Movie on 5-11-26 at 5.25 PM 2.ogv"
 
 [node name="IntroVideo" type="Node2D" unique_id=517494704]
 script = ExtResource("1_1u2e1")
@@ -18,7 +20,7 @@ offset_right = 576.0
 offset_bottom = 320.0
 grow_horizontal = 2
 grow_vertical = 2
-stream = ExtResource("2_anetg")
+stream = SubResource("VideoStreamTheora_1u2e1")
 autoplay = true
 
 [connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]
