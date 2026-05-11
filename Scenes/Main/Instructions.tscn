@@ -1,3 +1,29 @@
 [gd_scene format=3 uid="uid://dg0gy3iowyc5d"]
 
 [node name="Instructions" type="Node2D" unique_id=644979055]
+
+[node name="Panel" type="Panel" parent="." unique_id=116348451]
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Label" type="Label" parent="." unique_id=875561319]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 410.0
+offset_top = 32.0
+offset_right = 727.0
+offset_bottom = 142.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 80
+text = "Instructions: "
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=776551942]
+offset_left = 180.0
+offset_top = 86.0
+offset_right = 921.0
+offset_bottom = 505.0
+theme_override_font_sizes/normal_font_size = 33
+text = "type out instructions here"
+horizontal_alignment = 1
+vertical_alignment = 1

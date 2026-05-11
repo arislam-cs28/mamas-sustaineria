@@ -11,21 +11,23 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = 410.0
-offset_top = 2.0
+offset_top = 32.0
 offset_right = 727.0
-offset_bottom = 112.0
+offset_bottom = 142.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 80
 text = "Credits: "
 
-[node name="TextEdit" type="TextEdit" parent="." unique_id=1284340961]
-offset_left = 220.0
-offset_top = 149.0
-offset_right = 847.0
-offset_bottom = 380.0
-theme_override_font_sizes/font_size = 25
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1354298784]
+offset_left = 180.0
+offset_top = 86.0
+offset_right = 921.0
+offset_bottom = 505.0
+theme_override_font_sizes/normal_font_size = 33
 text = "Poe 4
 Instructor Mr. Hanas
 Art by Maggie Chen and Amy Wang
 Coded by Mallory Brennan and Arisha Islam
 Music by Maggie Chen"
+horizontal_alignment = 1
+vertical_alignment = 1
