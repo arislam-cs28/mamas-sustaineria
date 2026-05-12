@@ -22,12 +22,12 @@ theme_override_font_sizes/font_size = 80
 text = "Credits: "
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1354298784]
-offset_left = 180.0
+offset_left = 192.0
 offset_top = 86.0
-offset_right = 921.0
+offset_right = 933.0
 offset_bottom = 505.0
 theme_override_font_sizes/normal_font_size = 33
-text = "Poe 4
+text = "POE 4
 Instructor Mr. Hanas
 Art by Maggie Chen and Amy Wang
 Coded by Mallory Brennan and Arisha Islam
