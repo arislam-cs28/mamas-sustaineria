@@ -2,7 +2,11 @@
 
 [ext_resource type="Script" uid="uid://dln3u4um1esjh" path="res://Scripts/credits.gd" id="1_rfphu"]
 [ext_resource type="FontFile" uid="uid://cy1jcm8tofucl" path="res://Fonts/Silkscreen-Regular.ttf" id="2_4vai4"]
+[ext_resource type="Texture2D" uid="uid://dfhqt3t3wq1ad" path="res://Sprites/Backgrounds/IMG_1289.png" id="2_e3jly"]
 [ext_resource type="FontFile" uid="uid://n5py003eqye6" path="res://Fonts/SpaceMono-Regular.ttf" id="3_r3ix4"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yibps"]
+texture = ExtResource("2_e3jly")
 
 [node name="Credits" type="Node2D" unique_id=2044604102]
 script = ExtResource("1_rfphu")
@@ -10,6 +14,7 @@ script = ExtResource("1_rfphu")
 [node name="Panel" type="Panel" parent="." unique_id=1875139365]
 offset_right = 1152.0
 offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_yibps")
 
 [node name="Label" type="Label" parent="." unique_id=586009581]
 anchors_preset = 5
@@ -20,22 +25,27 @@ offset_top = 32.0
 offset_right = 727.0
 offset_bottom = 142.0
 grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("2_4vai4")
 theme_override_font_sizes/font_size = 80
 text = "Credits"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1354298784]
 offset_left = 120.0
-offset_top = 80.0
+offset_top = 96.0
 offset_right = 1032.0
-offset_bottom = 499.0
+offset_bottom = 544.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("3_r3ix4")
 theme_override_font_sizes/normal_font_size = 33
-text = "POE 4
-Instructor Mr. Hanas
+text = "Section: POE 4
+Instructor: Mr. Hanas
 Art by Maggie Chen and Amy Wang
 Coded by Mallory Brennan and Arisha Islam
-Music by Maggie Chen"
+Music Composed by Maggie Chen
+Made using the Godot Game Engine"
 horizontal_alignment = 1
 vertical_alignment = 1
 

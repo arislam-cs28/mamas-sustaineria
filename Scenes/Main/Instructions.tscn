@@ -2,7 +2,11 @@
 
 [ext_resource type="Script" uid="uid://bsanqvn4v7u71" path="res://Scripts/instructions.gd" id="1_i2yq2"]
 [ext_resource type="FontFile" uid="uid://cy1jcm8tofucl" path="res://Fonts/Silkscreen-Regular.ttf" id="2_5pt7t"]
+[ext_resource type="Texture2D" uid="uid://dfhqt3t3wq1ad" path="res://Sprites/Backgrounds/IMG_1289.png" id="2_aysvf"]
 [ext_resource type="FontFile" uid="uid://n5py003eqye6" path="res://Fonts/SpaceMono-Regular.ttf" id="3_aysvf"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sjacx"]
+texture = ExtResource("2_aysvf")
 
 [node name="Instructions" type="Node2D" unique_id=644979055]
 script = ExtResource("1_i2yq2")
@@ -10,6 +14,7 @@ script = ExtResource("1_i2yq2")
 [node name="Panel" type="Panel" parent="." unique_id=116348451]
 offset_right = 1152.0
 offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_sjacx")
 
 [node name="Label" type="Label" parent="." unique_id=875561319]
 anchors_preset = 5
@@ -20,6 +25,9 @@ offset_top = 24.0
 offset_right = 912.0
 offset_bottom = 134.0
 grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("2_5pt7t")
 theme_override_font_sizes/font_size = 80
 text = "Instructions"
@@ -29,6 +37,7 @@ offset_left = 128.0
 offset_top = 128.0
 offset_right = 1024.0
 offset_bottom = 576.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("3_aysvf")
 theme_override_font_sizes/normal_font_size = 26
 text = "Welcome to Mama's Sustaineria!
