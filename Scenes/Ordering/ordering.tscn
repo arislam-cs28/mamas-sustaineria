@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bbuaiw5u0tcvv"]
 
-[ext_resource type="Texture2D" uid="uid://vhiv0ry18iva" path="res://Sprites/Backgrounds/order.png" id="1_cgp7d"]
+[ext_resource type="Texture2D" uid="uid://bby3agvc17ic" path="res://Sprites/Backgrounds/IMG_1281.png" id="1_cgp7d"]
 
 [sub_resource type="GDScript" id="GDScript_cgp7d"]
 script/source = "extends Node2D
@@ -27,15 +27,3 @@ script = SubResource("GDScript_cgp7d")
 offset_right = 1152.0
 offset_bottom = 648.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_k5t1g")
-
-[node name="Label" type="Label" parent="." unique_id=1947241931]
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = 410.0
-offset_top = 32.0
-offset_right = 727.0
-offset_bottom = 142.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 80
-text = "order screen"
