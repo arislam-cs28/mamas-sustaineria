@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bbuaiw5u0tcvv"]
 
-[ext_resource type="Texture2D" uid="uid://bby3agvc17ic" path="res://Sprites/Backgrounds/IMG_1281.png" id="1_cgp7d"]
+[ext_resource type="Texture2D" uid="uid://bby3agvc17ic" path="res://Sprites/Orders/IMG_1281.png" id="1_cgp7d"]
 
 [sub_resource type="GDScript" id="GDScript_cgp7d"]
 script/source = "extends Node2D
