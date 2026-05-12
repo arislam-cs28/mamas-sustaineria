@@ -1,13 +1,27 @@
 [gd_scene format=3 uid="uid://bbuaiw5u0tcvv"]
 
 [ext_resource type="Texture2D" uid="uid://vhiv0ry18iva" path="res://Sprites/Backgrounds/order.png" id="1_cgp7d"]
-[ext_resource type="Script" uid="uid://bwcqe3g5iw8my" path="res://Scripts/ordering.gd" id="1_k5t1g"]
+
+[sub_resource type="GDScript" id="GDScript_cgp7d"]
+script/source = "extends Node2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+	
+"
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k5t1g"]
 texture = ExtResource("1_cgp7d")
 
 [node name="Ordering" type="Node2D" unique_id=123447793]
-script = ExtResource("1_k5t1g")
+script = SubResource("GDScript_cgp7d")
 
 [node name="Panel" type="Panel" parent="." unique_id=1029991555]
 offset_right = 1152.0

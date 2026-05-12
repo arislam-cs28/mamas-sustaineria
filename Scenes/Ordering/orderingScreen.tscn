@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://o8aihcqrxnjy"]
+
+[ext_resource type="Texture2D" uid="uid://bnpqkrei27ixu" path="res://Sprites/Backgrounds/IMG_1262.png" id="1_ocga6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wx62s"]
+texture = ExtResource("1_ocga6")
+
+[node name="OrderingScreen" type="Node2D" unique_id=1265581424]
+
+[node name="Panel" type="Panel" parent="." unique_id=708781203]
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_wx62s")
