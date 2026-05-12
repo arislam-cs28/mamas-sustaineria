@@ -12,4 +12,6 @@ func _process(delta: float) -> void:
 
 
 func _on_video_stream_player_finished() -> void:
+	TransitionScreen.transition()
+	await TransitionScreen.on_transition_finished
 	get_tree().change_scene_to_file("res://Scenes/Ordering/ordering.tscn")
