@@ -3,25 +3,80 @@
 [ext_resource type="Texture2D" uid="uid://dfhqt3t3wq1ad" path="res://Sprites/Backgrounds/IMG_1289.png" id="1_el3v4"]
 [ext_resource type="FontFile" uid="uid://cy1jcm8tofucl" path="res://Fonts/Silkscreen-Regular.ttf" id="2_arguk"]
 
+[sub_resource type="Animation" id="Animation_el3v4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RichTextLabel:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_c8184"]
 resource_name = "splash_screen"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RichTextLabel:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ty3ja"]
 _data = {
+&"RESET": SubResource("Animation_el3v4"),
 &"splash_screen": SubResource("Animation_c8184")
 }
 
 [node name="splash_screen" type="CanvasLayer" unique_id=2062530915]
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1978035220]
+modulate = Color(1, 1, 1, 0)
 offset_left = 192.0
-offset_top = 192.0
+offset_top = 184.0
 offset_right = 896.0
-offset_bottom = 448.0
+offset_bottom = 456.0
 texture = ExtResource("1_el3v4")
 expand_mode = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1134224002]
+modulate = Color(1, 1, 1, 0)
 offset_left = 200.0
 offset_top = 192.0
 offset_right = 888.0
