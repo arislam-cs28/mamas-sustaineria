@@ -10,3 +10,9 @@ func _physics_process(delta: float) -> void:
 	if speed > 0.0:
 		$AnimatedSprite2D.play("walk")
 	move_and_slide()
+	
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	speed = 0.0
+	$AnimatedSprite2D.stop()
+	print("or does it?")
