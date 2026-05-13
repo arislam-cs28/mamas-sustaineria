@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bkfj34wg0f412"]
 
-[ext_resource type="Texture2D" uid="uid://bpkw0ed5m1vt3" path="res://Characters/ch21.png" id="1_6y572"]
-[ext_resource type="Texture2D" uid="uid://cfmy804gtwq43" path="res://Characters/ch2.png" id="2_h4x52"]
+[ext_resource type="Texture2D" uid="uid://c6tk8o3yv1gqx" path="res://Characters/IMG_1624.png" id="1_6y572"]
+[ext_resource type="Texture2D" uid="uid://bgdfi0m2v4n8l" path="res://Characters/IMG_1625.png" id="2_h4x52"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_52vm4"]
 animations = [{
@@ -19,13 +19,16 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l45kc"]
 radius = 56.0
-height = 144.0
+height = 336.0
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1072410067]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=124494575]
+scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_52vm4")
+frame = 1
+frame_progress = 0.9668879
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=190315580]
-position = Vector2(-8, -16)
+position = Vector2(0, 16)
 shape = SubResource("CapsuleShape2D_l45kc")

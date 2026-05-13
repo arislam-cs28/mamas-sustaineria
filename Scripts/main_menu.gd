@@ -7,6 +7,8 @@ func _ready() -> void:
 
 
 func _on_start_button_pressed() -> void:
+	TransitionScreen.transition()
+	await TransitionScreen.on_transition_finished
 	get_tree().change_scene_to_file("res://Scenes/Intro/intro_video.tscn")
 
 
