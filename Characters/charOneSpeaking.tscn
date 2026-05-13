@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://b855oloyl1v3e"]
+
+[ext_resource type="Script" uid="uid://bgcjtq1lgvkol" path="res://Characters/char_one_speaking.gd" id="1_p8im3"]
+[ext_resource type="Texture2D" uid="uid://ca7im05tcitv8" path="res://Characters/Headshots/IMG_1627.png" id="2_hyuf5"]
+[ext_resource type="Texture2D" uid="uid://84p8rg2rq7ia" path="res://Characters/Headshots/IMG_1628.png" id="3_ok457"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6dte5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_hyuf5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ok457")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_baiff"]
+radius = 145.0
+height = 464.0
+
+[node name="CharOneSpeaking" type="CharacterBody2D" unique_id=1470911591]
+script = ExtResource("1_p8im3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1246661360]
+position = Vector2(1, 0)
+scale = Vector2(0.45, 0.45)
+sprite_frames = SubResource("SpriteFrames_6dte5")
+frame_progress = 0.037073836
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=521647787]
+position = Vector2(-1, 13)
+shape = SubResource("CapsuleShape2D_baiff")

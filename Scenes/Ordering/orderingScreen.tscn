@@ -1,13 +1,25 @@
 [gd_scene format=3 uid="uid://o8aihcqrxnjy"]
 
+[ext_resource type="Script" uid="uid://boaxr2cs3p6ds" path="res://Scripts/ordering_screen.gd" id="1_i3wv1"]
 [ext_resource type="Texture2D" uid="uid://bnpqkrei27ixu" path="res://Sprites/Orders/IMG_1262.png" id="1_ocga6"]
+[ext_resource type="PackedScene" uid="uid://b855oloyl1v3e" path="res://Characters/charOneSpeaking.tscn" id="3_xxfxb"]
+[ext_resource type="Texture2D" uid="uid://ben83ygf5bo88" path="res://Sprites/Orders/Screenshot_2026-05-13_at_5.39.37_PM-removebg-preview-2.png" id="4_xxfxb"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wx62s"]
 texture = ExtResource("1_ocga6")
 
 [node name="OrderingScreen" type="Node2D" unique_id=1265581424]
+script = ExtResource("1_i3wv1")
 
 [node name="Panel" type="Panel" parent="." unique_id=708781203]
 offset_right = 1152.0
 offset_bottom = 648.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_wx62s")
+
+[node name="CharOneSpeaking" parent="." unique_id=1470911591 instance=ExtResource("3_xxfxb")]
+position = Vector2(547, 213)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=986352205]
+position = Vector2(576, 320.00003)
+scale = Vector2(1.7396626, 1.7596667)
+texture = ExtResource("4_xxfxb")
