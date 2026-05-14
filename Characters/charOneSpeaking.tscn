@@ -20,17 +20,37 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_baiff"]
 radius = 145.0
-height = 464.0
+height = 416.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p8im3"]
+bg_color = Color(0.25808322, 0.5901318, 0.30683917, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
 [node name="CharOneSpeaking" type="CharacterBody2D" unique_id=1470911591]
 script = ExtResource("1_p8im3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1246661360]
-position = Vector2(1, 0)
-scale = Vector2(0.45, 0.45)
+position = Vector2(2.7187538, 2.2178307)
+scale = Vector2(0.38009262, 0.38009262)
 sprite_frames = SubResource("SpriteFrames_6dte5")
 frame_progress = 0.037073836
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=521647787]
 position = Vector2(-1, 13)
 shape = SubResource("CapsuleShape2D_baiff")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1977516482]
+offset_left = -507.0
+offset_top = 174.0
+offset_right = -178.0
+offset_bottom = 269.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_p8im3")
+
+[node name="Label" type="Label" parent="PanelContainer" unique_id=126977371]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Polly Etelené"
+horizontal_alignment = 1

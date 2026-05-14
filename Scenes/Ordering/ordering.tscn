@@ -3,7 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://bby3agvc17ic" path="res://Sprites/Orders/IMG_1281.png" id="1_cgp7d"]
 [ext_resource type="Script" uid="uid://cien4x0rhxu5r" path="res://Scripts/ordering.gd" id="1_unulo"]
 [ext_resource type="Texture2D" uid="uid://b3pwmaws0aien" path="res://Sprites/Orders/IMG_1282.png" id="2_k5t1g"]
-[ext_resource type="PackedScene" uid="uid://c5md6cdvg37u0" path="res://Characters/one_char.tscn" id="3_r20fn"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k5t1g"]
 texture = ExtResource("1_cgp7d")
@@ -26,9 +25,5 @@ texture = ExtResource("2_k5t1g")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=1302778373]
 polygon = PackedVector2Array(-8, 376, 344, 184, 376, 504, 152, 656, -24, 664)
 
-[node name="Char1" parent="." unique_id=1137176941 instance=ExtResource("3_r20fn")]
-position = Vector2(1208, 336)
-
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="Area2D" to="Char1" method="_on_area_2d_area_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
