@@ -7,7 +7,7 @@ func _ready() -> void:
 		var instance = customer_scene.instantiate()
 		add_child(instance)
 		# Set where they walk in from (Right side)
-		instance.global_position = Vector2(1000, 300) 
+		instance.global_position = Vector2(1000, 350) 
 		instance.add_to_group("current_customer")
 	else:
 		print("No more customers!")
