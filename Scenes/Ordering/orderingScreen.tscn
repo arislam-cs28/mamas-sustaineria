@@ -1,25 +1,19 @@
 [gd_scene format=3 uid="uid://o8aihcqrxnjy"]
 
+[ext_resource type="Script" uid="uid://boaxr2cs3p6ds" path="res://Scripts/ordering_screen.gd" id="1_i3wv1"]
 [ext_resource type="Texture2D" uid="uid://bnpqkrei27ixu" path="res://Sprites/Orders/IMG_1262.png" id="1_ocga6"]
-[ext_resource type="Texture2D" uid="uid://d1p77k0xebhd3" path="res://Sprites/Misc/IMG_1265.png" id="2_i3wv1"]
-[ext_resource type="Texture2D" uid="uid://bb2wfgk17hhi8" path="res://Sprites/Misc/IMG_1268.png" id="3_xxfxb"]
+[ext_resource type="PackedScene" uid="uid://b855oloyl1v3e" path="res://Characters/charOneSpeaking.tscn" id="3_xxfxb"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wx62s"]
 texture = ExtResource("1_ocga6")
 
 [node name="OrderingScreen" type="Node2D" unique_id=1265581424]
+script = ExtResource("1_i3wv1")
 
 [node name="Panel" type="Panel" parent="." unique_id=708781203]
 offset_right = 1152.0
 offset_bottom = 648.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_wx62s")
 
-[node name="Img1265" type="Sprite2D" parent="." unique_id=1076868069]
-position = Vector2(576, 127.99999)
-scale = Vector2(0.47662395, 0.40570527)
-texture = ExtResource("2_i3wv1")
-
-[node name="Img1268" type="Sprite2D" parent="." unique_id=683933316]
-position = Vector2(576.00006, 76.00001)
-scale = Vector2(0.47662398, 0.38874683)
-texture = ExtResource("3_xxfxb")
+[node name="CharOneSpeaking" parent="." unique_id=1470911591 instance=ExtResource("3_xxfxb")]
+position = Vector2(544, 185)
