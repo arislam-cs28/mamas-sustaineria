@@ -1,5 +1,7 @@
 extends Node2D
 
+var colors = ["Red", "Blue", "Green", "Yellow", "Pink", "Purple", "Orange", "White", "Black"] 
+
 func _ready() -> void:
 	var customer_scene = GameManage.get_next_customer()
 	
@@ -14,6 +16,9 @@ func _ready() -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("current_customer"):
+		var random_color = colors[randi() % colors.size()]
+		var final_order = random_color + " plastic"
+		GameManage.current_order_text = final_order
 		if "moves" in body:
 			body.moves = false
 		# Wait and switch scenes

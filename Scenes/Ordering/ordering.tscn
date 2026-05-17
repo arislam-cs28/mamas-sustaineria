@@ -23,7 +23,8 @@ texture = ExtResource("2_k5t1g")
 [node name="Top" type="Area2D" parent="." unique_id=584903787]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Top" unique_id=1302778373]
+position = Vector2(2.699997, 0)
+scale = Vector2(1.01875, 1)
 polygon = PackedVector2Array(-8, 376, 344, 184, 376, 504, 152, 656, -24, 664)
 
-[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Top" to="." method="_on_area_2d_body_entered"]

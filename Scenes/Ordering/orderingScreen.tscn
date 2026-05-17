@@ -17,3 +17,15 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_wx62s")
 
 [node name="CharOneSpeaking" parent="." unique_id=1470911591 instance=ExtResource("3_xxfxb")]
 position = Vector2(544, 185)
+
+[node name="OrderPanel" type="PanelContainer" parent="." unique_id=400152329]
+offset_left = 830.0
+offset_top = 41.0
+offset_right = 1089.0
+offset_bottom = 410.0
+
+[node name="OrderText" type="Label" parent="OrderPanel" unique_id=256440829]
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+horizontal_alignment = 1
+vertical_alignment = 1

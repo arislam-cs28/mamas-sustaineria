@@ -1,6 +1,7 @@
 extends Node
 
 var current_index = 0
+var current_order_text = ""
 
 # Add all your character files here!
 var customers = [
