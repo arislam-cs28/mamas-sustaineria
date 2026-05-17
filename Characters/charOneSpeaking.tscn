@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://b855oloyl1v3e"]
 
-[ext_resource type="Script" uid="uid://bgcjtq1lgvkol" path="res://Characters/char_one_speaking.gd" id="1_p8im3"]
+[ext_resource type="Script" path="res://Characters/char_one_speaking.gd" id="1_p8im3"]
 [ext_resource type="Texture2D" uid="uid://ca7im05tcitv8" path="res://Characters/Headshots/IMG_1627.png" id="2_hyuf5"]
 [ext_resource type="Texture2D" uid="uid://84p8rg2rq7ia" path="res://Characters/Headshots/IMG_1628.png" id="3_ok457"]
+[ext_resource type="FontFile" uid="uid://cy1jcm8tofucl" path="res://Fonts/Silkscreen-Regular.ttf" id="5_6dte5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6dte5"]
 animations = [{
@@ -44,13 +45,19 @@ shape = SubResource("CapsuleShape2D_baiff")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=1977516482]
 offset_left = -507.0
-offset_top = 174.0
-offset_right = -178.0
-offset_bottom = 269.0
+offset_top = 184.0
+offset_right = -160.0
+offset_bottom = 264.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_p8im3")
+metadata/_edit_group_ = true
 
-[node name="Label" type="Label" parent="PanelContainer" unique_id=126977371]
-layout_mode = 2
-theme_override_font_sizes/font_size = 50
+[node name="Label" type="Label" parent="." unique_id=126977371]
+offset_left = -496.0
+offset_top = 197.0
+offset_right = -172.0
+offset_bottom = 253.0
+theme_override_fonts/font = ExtResource("5_6dte5")
+theme_override_font_sizes/font_size = 37
 text = "Polly Etelené"
 horizontal_alignment = 1
+metadata/_edit_group_ = true
