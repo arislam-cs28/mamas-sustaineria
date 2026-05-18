@@ -62,5 +62,5 @@ scale = Vector2(0.46392608, 0.4563841)
 shape = SubResource("RectangleShape2D_nxh0s")
 
 [node name="Stopwatch2" parent="." unique_id=1619344646 instance=ExtResource("5_ione4")]
-position = Vector2(161, 440)
+position = Vector2(184, 448)
 scale = Vector2(0.75, 0.75)
