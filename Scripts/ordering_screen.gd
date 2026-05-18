@@ -15,9 +15,7 @@ func _ready() -> void:
 	await tween.finished
 	await get_tree().create_timer(1.0).timeout
 	get_tree().change_scene_to_file("res://Scenes/Ordering/ordering.tscn")
-	await get_tree().create_timer(1.0).timeout
-	TransitionScreen.transition()
-	await TransitionScreen.on_transition_finished
+
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
