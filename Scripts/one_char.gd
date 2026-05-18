@@ -16,7 +16,7 @@ func _physics_process(_delta: float) -> void:
 		move_and_slide()
 		return
 
-	# walking
+	# walk
 	velocity = direction * speed
 	$AnimatedSprite2D.play("walk") 
 	move_and_slide()

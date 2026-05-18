@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://dxiltmiekvphh"]
+
+[ext_resource type="Script" uid="uid://cmi628om1bmlc" path="res://Characters/char_three_speaking.gd" id="1_hm3qe"]
+[ext_resource type="Texture2D" uid="uid://lrk8ejq2fgih" path="res://Characters/Headshots/IMG_1667.png" id="1_ur56l"]
+[ext_resource type="Texture2D" uid="uid://b5rda0t4yfjly" path="res://Characters/Headshots/IMG_1668.png" id="2_223ef"]
+[ext_resource type="FontFile" uid="uid://cy1jcm8tofucl" path="res://Fonts/Silkscreen-Regular.ttf" id="3_223ef"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hm3qe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ur56l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_223ef")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hm3qe"]
+radius = 144.0
+height = 432.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_04syh"]
+bg_color = Color(0.25808322, 0.5901318, 0.30683917, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="CharThreeSpeaking" type="CharacterBody2D" unique_id=2112705626]
+script = ExtResource("1_hm3qe")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=7930502]
+scale = Vector2(0.38, 0.38)
+sprite_frames = SubResource("SpriteFrames_hm3qe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=962416306]
+position = Vector2(0, 24)
+shape = SubResource("CapsuleShape2D_hm3qe")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=373252548]
+offset_left = -507.0
+offset_top = 184.0
+offset_right = -160.0
+offset_bottom = 264.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_04syh")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="." unique_id=1274878275]
+offset_left = -496.0
+offset_top = 197.0
+offset_right = -172.0
+offset_bottom = 253.0
+theme_override_fonts/font = ExtResource("3_223ef")
+theme_override_font_sizes/font_size = 37
+text = "Sylia Coen"
+horizontal_alignment = 1
+metadata/_edit_group_ = true

@@ -4,8 +4,9 @@ var current_index = 0
 var current_order_text = ""
 var customer_is_waiting = false
 
-# add characters
-var customers = [preload("res://Characters/one_char.tscn"),
+# Add all your character files here!
+var customers = [
+	preload("res://Characters/one_char.tscn"),
 	preload("res://Characters/two_char.tscn"),
 	preload("res://Characters/three_char.tscn")
 ]

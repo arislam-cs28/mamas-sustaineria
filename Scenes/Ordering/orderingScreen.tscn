@@ -4,6 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://bnpqkrei27ixu" path="res://Sprites/Orders/IMG_1262.png" id="1_ocga6"]
 [ext_resource type="PackedScene" uid="uid://b855oloyl1v3e" path="res://Characters/charOneSpeaking.tscn" id="3_xxfxb"]
 [ext_resource type="Texture2D" uid="uid://bdryt0l503t5p" path="res://Sprites/Misc/IMG_1600.png" id="4_xxfxb"]
+<<<<<<< HEAD
+=======
+[ext_resource type="FontFile" uid="uid://n5py003eqye6" path="res://Fonts/SpaceMono-Regular.ttf" id="5_ojgwq"]
+>>>>>>> parent of 4768738 (Merge branch 'main' of https://github.com/arislam-cs28/mamas-sustaineria)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wx62s"]
 texture = ExtResource("1_ocga6")
@@ -23,15 +27,29 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_wx62s")
 position = Vector2(544, 185)
 
 [node name="OrderPanel" type="PanelContainer" parent="." unique_id=400152329]
+<<<<<<< HEAD
 offset_left = 830.0
 offset_top = 41.0
 offset_right = 1089.0
 offset_bottom = 410.0
+=======
+offset_left = 688.0
+offset_top = 240.0
+offset_right = 960.0
+offset_bottom = 418.0
+>>>>>>> parent of 4768738 (Merge branch 'main' of https://github.com/arislam-cs28/mamas-sustaineria)
 theme_override_styles/panel = SubResource("StyleBoxTexture_ojgwq")
 
 [node name="OrderText" type="Label" parent="OrderPanel" unique_id=256440829]
 layout_mode = 2
+<<<<<<< HEAD
 theme_override_colors/font_color = Color(0.033853278, 0.033853278, 0.033853274, 1)
 theme_override_font_sizes/font_size = 25
+=======
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_ojgwq")
+theme_override_font_sizes/font_size = 23
+>>>>>>> parent of 4768738 (Merge branch 'main' of https://github.com/arislam-cs28/mamas-sustaineria)
 horizontal_alignment = 1
 vertical_alignment = 1
+clip_text = true
