@@ -18,17 +18,17 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l45kc"]
-radius = 56.0
-height = 336.0
+radius = 648.0
+height = 3388.235
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1072410067]
+scale = Vector2(0.17, 0.17)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=124494575]
-scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_52vm4")
 frame = 1
 frame_progress = 0.9668879
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=190315580]
-position = Vector2(0, 16)
+position = Vector2(-1.1368684e-13, 94.11765)
 shape = SubResource("CapsuleShape2D_l45kc")

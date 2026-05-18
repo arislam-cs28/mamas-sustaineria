@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dxiltmiekvphh"]
 
+[ext_resource type="Script" uid="uid://cmi628om1bmlc" path="res://Characters/char_three_speaking.gd" id="1_hm3qe"]
 [ext_resource type="Texture2D" uid="uid://lrk8ejq2fgih" path="res://Characters/Headshots/IMG_1667.png" id="1_ur56l"]
 [ext_resource type="Texture2D" uid="uid://b5rda0t4yfjly" path="res://Characters/Headshots/IMG_1668.png" id="2_223ef"]
 [ext_resource type="FontFile" uid="uid://cy1jcm8tofucl" path="res://Fonts/Silkscreen-Regular.ttf" id="3_223ef"]
@@ -30,6 +31,7 @@ corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
 [node name="CharThreeSpeaking" type="CharacterBody2D" unique_id=2112705626]
+script = ExtResource("1_hm3qe")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=7930502]
 scale = Vector2(0.38, 0.38)
