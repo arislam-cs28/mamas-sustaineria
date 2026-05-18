@@ -29,8 +29,8 @@ scale = Vector2(1.01875, 1)
 polygon = PackedVector2Array(-8, 376, 344, 184, 376, 504, 152, 656, -24, 664)
 
 [node name="Img1274" type="Sprite2D" parent="." unique_id=1153763218]
-position = Vector2(1083.375, 256.63187)
-scale = Vector2(0.24084672, 0.24006346)
+position = Vector2(1058, 233.07712)
+scale = Vector2(0.35697925, 0.35581827)
 texture = ExtResource("4_unulo")
 
 [connection signal="body_entered" from="Top" to="." method="_on_area_2d_body_entered"]
