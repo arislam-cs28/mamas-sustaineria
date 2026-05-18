@@ -64,7 +64,6 @@ shape = SubResource("RectangleShape2D_nxh0s")
 [node name="Stopwatch2" parent="." unique_id=1619344646]
 position = Vector2(184, 448)
 scale = Vector2(0.75, 0.75)
-<<<<<<< HEAD
 
 [node name="Sorting" type="Button" parent="." unique_id=1037679101]
 offset_left = 134.0
@@ -101,5 +100,3 @@ offset_bottom = 642.0
 theme_override_fonts/font = ExtResource("5_ione4")
 theme_override_font_sizes/font_size = 30
 text = "Coloring"
-=======
->>>>>>> parent of 4768738 (Merge branch 'main' of https://github.com/arislam-cs28/mamas-sustaineria)
