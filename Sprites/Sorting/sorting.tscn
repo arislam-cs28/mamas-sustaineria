@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bsbg4pug1lvsw" path="res://Sprites/Sorting/whi_bin.png" id="2_vnq5x"]
 [ext_resource type="Texture2D" uid="uid://drf5r3gmwrv4" path="res://Sprites/Sorting/cont_bin.png" id="3_ione4"]
 [ext_resource type="Texture2D" uid="uid://bxi33eeyx6cvd" path="res://Sprites/Sorting/col_bin.png" id="4_268yn"]
-[ext_resource type="PackedScene" uid="uid://dlee317uw5oq3" path="res://Sprites/Misc/stopwatch2.tscn" id="5_ione4"]
+[ext_resource type="PackedScene" path="res://Sprites/Misc/stopwatch2.tscn" id="5_ione4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ione4"]
 size = Vector2(576.0001, 288.00003)
@@ -61,6 +61,5 @@ position = Vector2(217.4027, 108)
 scale = Vector2(0.46392608, 0.4563841)
 shape = SubResource("RectangleShape2D_nxh0s")
 
-[node name="Stopwatch2" parent="." unique_id=1619344646]
-position = Vector2(184, 448)
-scale = Vector2(0.75, 0.75)
+[node name="Stopwatch2" parent="." unique_id=1619344646 instance=ExtResource("5_ione4")]
+position = Vector2(208, 448)
