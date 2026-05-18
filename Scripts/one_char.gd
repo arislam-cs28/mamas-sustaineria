@@ -5,14 +5,18 @@ extends CharacterBody2D
 @export var moves: bool = true
 
 func _physics_process(_delta: float) -> void:
+	# standing still
 	if not moves:
-		speed = 0.0
-	
+		velocity = Vector2.ZERO
+		if $AnimatedSprite2D.sprite_frames.has_animation("idle"):
+			$AnimatedSprite2D.play("idle")
+		else:
+			$AnimatedSprite2D.stop()
+			$AnimatedSprite2D.frame = 0
+		move_and_slide()
+		return
+
+	# walk
 	velocity = direction * speed
-	
-	if speed > 0.0:
-		$AnimatedSprite2D.play("walk")
-	else:
-		$AnimatedSprite2D.stop()
-		
+	$AnimatedSprite2D.play("walk") 
 	move_and_slide()
