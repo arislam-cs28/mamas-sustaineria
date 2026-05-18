@@ -3,7 +3,7 @@ extends Node2D
 var colors = ["Red", "Blue", "Green", "Yellow", "Pink", "Purple", "Orange", "White", "Black"] 
 
 func _ready() -> void:
-	# Force reset the waiting flag if we are starting a brand new order loop
+	# reset waiting when starting new order
 	if GameManage.current_order_text == "":
 		GameManage.customer_is_waiting = false
 
@@ -16,16 +16,28 @@ func _ready() -> void:
 		
 		if GameManage.customer_is_waiting:
 			# standing after order
-			instance.global_position = Vector2(600, 210) 
+			instance.global_position = Vector2(600, 220) 
 			instance.moves = false
+			$Sorting.visible = true
+			$PanelContainer.visible = true
+			$Processing.visible = true
+			$Melting.visible = true
+			$Coloring.visible = true
+			
 		else:
 			#place on right side of screen
 			instance.global_position = Vector2(1200, 350) 
 			
-			# reboot vars
+			# reboot variables
 			instance.moves = true
 			if "speed" in instance:
 				instance.speed = 200.0 
+				
+			$Sorting.visible = false
+			$PanelContainer.visible = false
+			$Processing.visible = false
+			$Melting.visible = false
+			$Coloring.visible = false
 	else:
 		print("No more customers!")
 
@@ -38,8 +50,21 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		GameManage.customer_is_waiting = true
 		
 		var random_color = colors[randi() % colors.size()]
-		var final_order = random_color + " Plastic"
+		var final_order = random_color + " plastic"
 		GameManage.current_order_text = final_order
 		
 		await get_tree().create_timer(1.0).timeout
 		get_tree().change_scene_to_file("res://Scenes/Ordering/orderingScreen.tscn")
+
+
+func _on_sorting_pressed() -> void:
+	get_tree().change_scene_to_file("res://Sprites/Sorting/sorting.tscn")
+
+func _on_processing_pressed() -> void:
+	get_tree().change_scene_to_file("res://Sprites/Processing/processing.tscn")
+
+func _on_melting_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/melting/melting.tscn")
+
+func _on_coloring_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/coloring/coloring.tscn")
