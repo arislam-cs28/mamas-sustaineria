@@ -1,4 +1,4 @@
-extends Node
+extends RigidBody2D
 
 @onready var label = $Label3
 @onready var timer = $Timer

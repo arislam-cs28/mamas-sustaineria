@@ -1,12 +1,32 @@
 [gd_scene format=3 uid="uid://dfg3svwlqevw4"]
 
-[ext_resource type="Script" uid="uid://nasn4unhtwy2" path="res://Sprites/Misc/stopwatch.gd" id="1_jgjxy"]
 [ext_resource type="Texture2D" uid="uid://8b16je7gwnew" path="res://Sprites/Misc/digi_clock.png" id="2_72lhn"]
 [ext_resource type="FontFile" uid="uid://n5py003eqye6" path="res://Fonts/SpaceMono-Regular.ttf" id="3_d3hu5"]
 [ext_resource type="FontFile" uid="uid://cy1jcm8tofucl" path="res://Fonts/Silkscreen-Regular.ttf" id="4_jgjxy"]
 
+[sub_resource type="GDScript" id="GDScript_wcd1f"]
+script/source = "extends Node
+
+@onready var label = $Label3
+@onready var timer = $Timer
+
+func _ready():
+	await get_tree().create_timer(1.0).timeout
+	timer.start()
+	
+func time_left_still():
+	var time_left = timer.time_left
+	var minute = floor(time_left / 60)
+	var second = int(time_left) % 60
+	
+	return [minute, second]
+	
+func _process(delta):
+	label.text = \"%02d:%02d\" % time_left_still()
+"
+
 [node name="Stopwatch" type="Node" unique_id=809101853]
-script = ExtResource("1_jgjxy")
+script = SubResource("GDScript_wcd1f")
 
 [node name="DigiClock" type="Sprite2D" parent="." unique_id=1023218604]
 position = Vector2(1.4588013, -2.3749847)

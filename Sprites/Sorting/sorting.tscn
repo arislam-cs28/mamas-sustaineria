@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bsbg4pug1lvsw" path="res://Sprites/Sorting/whi_bin.png" id="2_vnq5x"]
 [ext_resource type="Texture2D" uid="uid://drf5r3gmwrv4" path="res://Sprites/Sorting/cont_bin.png" id="3_ione4"]
 [ext_resource type="Texture2D" uid="uid://bxi33eeyx6cvd" path="res://Sprites/Sorting/col_bin.png" id="4_268yn"]
-[ext_resource type="Texture2D" uid="uid://8b16je7gwnew" path="res://Sprites/Misc/digi_clock.png" id="5_ione4"]
+[ext_resource type="PackedScene" uid="uid://dlee317uw5oq3" path="res://Sprites/Misc/stopwatch2.tscn" id="5_ione4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ione4"]
 size = Vector2(576.0001, 288.00003)
@@ -22,45 +22,45 @@ position = Vector2(576, 324)
 scale = Vector2(0.47603303, 0.38848916)
 texture = ExtResource("1_0rsmd")
 
-[node name="WhiBin" type="Sprite2D" parent="." unique_id=789708633]
+[node name="White" type="RigidBody2D" parent="." unique_id=210738629]
+freeze = true
+
+[node name="WhiBin" type="Sprite2D" parent="White" unique_id=789708633]
 position = Vector2(527.99994, 215.99998)
 scale = Vector2(0.4722222, 0.47222224)
 texture = ExtResource("2_vnq5x")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WhiBin" unique_id=946639975]
-position = Vector2(0.00012207031, -228.70584)
-scale = Vector2(0.9999994, 1)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="White" unique_id=946639975]
+position = Vector2(528, 108)
+scale = Vector2(0.47222194, 0.47222224)
 shape = SubResource("RectangleShape2D_ione4")
 
-[node name="ContBin" type="Sprite2D" parent="." unique_id=1515303033]
+[node name="Contaminated" type="RigidBody2D" parent="." unique_id=1280622933]
+freeze = true
+
+[node name="ContBin" type="Sprite2D" parent="Contaminated" unique_id=1515303033]
 position = Vector2(864, 200)
 scale = Vector2(0.5223064, 0.4868723)
 texture = ExtResource("3_ione4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ContBin" unique_id=876588184]
-position = Vector2(7.658203, -197.17694)
-scale = Vector2(0.99999976, 1)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Contaminated" unique_id=876588184]
+position = Vector2(867.99994, 104.000015)
+scale = Vector2(0.52230626, 0.4868723)
 shape = SubResource("RectangleShape2D_268yn")
 
-[node name="ColBin" type="Sprite2D" parent="." unique_id=1694400225]
+[node name="Colored" type="RigidBody2D" parent="." unique_id=1164059937]
+freeze = true
+
+[node name="ColBin" type="Sprite2D" parent="Colored" unique_id=1694400225]
 position = Vector2(221.75, 203.2047)
 scale = Vector2(0.4639262, 0.4563841)
 texture = ExtResource("4_268yn")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ColBin" unique_id=738549837]
-position = Vector2(-9.370697, -208.60652)
-scale = Vector2(0.99999976, 1)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Colored" unique_id=738549837]
+position = Vector2(217.4027, 108)
+scale = Vector2(0.46392608, 0.4563841)
 shape = SubResource("RectangleShape2D_nxh0s")
 
-[node name="DigiClock" type="Sprite2D" parent="." unique_id=1924922597]
-position = Vector2(135.89972, 442.375)
-scale = Vector2(0.10849433, 0.09697129)
-texture = ExtResource("5_ione4")
-
-[node name="Timer" type="Timer" parent="DigiClock" unique_id=40483047]
-
-[node name="Label" type="Label" parent="DigiClock" unique_id=1262697366]
-offset_left = -736.4414
-offset_top = -271.9878
-offset_right = 747.5071
-offset_bottom = 140.50537
+[node name="Stopwatch2" parent="." unique_id=1619344646 instance=ExtResource("5_ione4")]
+position = Vector2(161, 440)
+scale = Vector2(0.75, 0.75)
