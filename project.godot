@@ -18,7 +18,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Musiccontroller="*uid://ctpmch52kxqpi"
+Musiccontroller="*uid://clmo4lq10vus"
 TransitionScreen="*uid://cmkc4hgx7usim"
 GameManage="*uid://bvymbd1ek88kk"
 
