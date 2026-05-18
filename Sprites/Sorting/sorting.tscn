@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://u2jy600ycx88"]
 
 [ext_resource type="Texture2D" uid="uid://bdyb8mkxhettn" path="res://Sprites/Sorting/sort_bg.png" id="1_0rsmd"]
+[ext_resource type="Texture2D" uid="uid://drf5r3gmwrv4" path="res://Sprites/Sorting/cont_bin.png" id="2_vnq5x"]
+[ext_resource type="Texture2D" uid="uid://bxi33eeyx6cvd" path="res://Sprites/Sorting/col_bin.png" id="3_ione4"]
+[ext_resource type="Texture2D" uid="uid://bsbg4pug1lvsw" path="res://Sprites/Sorting/whi_bin.png" id="4_268yn"]
 
 [node name="Sorting" type="Node2D" unique_id=669842154]
 
@@ -8,3 +11,18 @@
 position = Vector2(576, 324)
 scale = Vector2(0.47603303, 0.38848916)
 texture = ExtResource("1_0rsmd")
+
+[node name="ContBin" type="Sprite2D" parent="." unique_id=986722687]
+position = Vector2(203, 198)
+scale = Vector2(0.5050504, 0.5050504)
+texture = ExtResource("2_vnq5x")
+
+[node name="ColBin" type="Sprite2D" parent="." unique_id=1467077515]
+position = Vector2(537, 201.00002)
+scale = Vector2(0.50579387, 0.505794)
+texture = ExtResource("3_ione4")
+
+[node name="WhiBin" type="Sprite2D" parent="." unique_id=1941193963]
+position = Vector2(856.75, 202.81372)
+scale = Vector2(0.5078127, 0.5078127)
+texture = ExtResource("4_268yn")
