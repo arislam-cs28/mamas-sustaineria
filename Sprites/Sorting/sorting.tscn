@@ -43,9 +43,10 @@ offset_bottom = 652.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_268yn")
 metadata/_edit_group_ = true
 
-[node name="Stopwatch2" parent="." unique_id=1619344646 instance=ExtResource("5_ione4")]
+[node name="Stopwatch2" parent="." unique_id=1619344646]
 position = Vector2(184, 448)
 scale = Vector2(0.75, 0.75)
+
 [node name="Sorting" type="Button" parent="." unique_id=1037679101]
 offset_left = 134.0
 offset_top = 591.0

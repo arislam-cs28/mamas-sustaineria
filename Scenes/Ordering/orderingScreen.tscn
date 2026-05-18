@@ -3,9 +3,13 @@
 [ext_resource type="Script" uid="uid://boaxr2cs3p6ds" path="res://Scripts/ordering_screen.gd" id="1_i3wv1"]
 [ext_resource type="Texture2D" uid="uid://bnpqkrei27ixu" path="res://Sprites/Orders/IMG_1262.png" id="1_ocga6"]
 [ext_resource type="PackedScene" uid="uid://b855oloyl1v3e" path="res://Characters/charOneSpeaking.tscn" id="3_xxfxb"]
+[ext_resource type="Texture2D" uid="uid://bdryt0l503t5p" path="res://Sprites/Misc/IMG_1600.png" id="4_xxfxb"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wx62s"]
 texture = ExtResource("1_ocga6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ojgwq"]
+texture = ExtResource("4_xxfxb")
 
 [node name="OrderingScreen" type="Node2D" unique_id=1265581424]
 script = ExtResource("1_i3wv1")
@@ -23,9 +27,11 @@ offset_left = 830.0
 offset_top = 41.0
 offset_right = 1089.0
 offset_bottom = 410.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_ojgwq")
 
 [node name="OrderText" type="Label" parent="OrderPanel" unique_id=256440829]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.033853278, 0.033853278, 0.033853274, 1)
 theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
