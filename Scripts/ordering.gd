@@ -3,24 +3,43 @@ extends Node2D
 var colors = ["Red", "Blue", "Green", "Yellow", "Pink", "Purple", "Orange", "White", "Black"] 
 
 func _ready() -> void:
+	# Force reset the waiting flag if we are starting a brand new order loop
+	if GameManage.current_order_text == "":
+		GameManage.customer_is_waiting = false
+
 	var customer_scene = GameManage.get_next_customer()
 	
 	if customer_scene:
 		var instance = customer_scene.instantiate()
 		add_child(instance)
-		# Set where they walk in from (Right side)
-		instance.global_position = Vector2(1000, 350) 
 		instance.add_to_group("current_customer")
+		
+		if GameManage.customer_is_waiting:
+			# standing after order
+			instance.global_position = Vector2(600, 210) 
+			instance.moves = false
+		else:
+			#place on right side of screen
+			instance.global_position = Vector2(1200, 350) 
+			
+			# reboot vars
+			instance.moves = true
+			if "speed" in instance:
+				instance.speed = 200.0 
 	else:
 		print("No more customers!")
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("current_customer"):
+		if GameManage.customer_is_waiting:
+			return
+			
+		body.moves = false
+		GameManage.customer_is_waiting = true
+		
 		var random_color = colors[randi() % colors.size()]
 		var final_order = random_color + " plastic"
 		GameManage.current_order_text = final_order
-		if "moves" in body:
-			body.moves = false
-		# Wait and switch scenes
+		
 		await get_tree().create_timer(1.0).timeout
 		get_tree().change_scene_to_file("res://Scenes/Ordering/orderingScreen.tscn")

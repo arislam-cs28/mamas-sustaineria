@@ -2,6 +2,7 @@ extends Node
 
 var current_index = 0
 var current_order_text = ""
+var customer_is_waiting = false
 
 # Add all your character files here!
 var customers = [

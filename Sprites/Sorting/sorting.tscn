@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://u2jy600ycx88"]
+
+[ext_resource type="Texture2D" uid="uid://bdyb8mkxhettn" path="res://Sprites/Sorting/sort_bg.png" id="1_0rsmd"]
+
+[node name="Sorting" type="Node2D" unique_id=669842154]
+
+[node name="SortBg" type="Sprite2D" parent="." unique_id=989731667]
+position = Vector2(576, 324)
+scale = Vector2(0.47603303, 0.38848916)
+texture = ExtResource("1_0rsmd")
