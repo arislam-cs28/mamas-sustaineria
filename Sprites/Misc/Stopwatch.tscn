@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://djfq02gvee4py"]
+
+[ext_resource type="Texture2D" uid="uid://8b16je7gwnew" path="res://Sprites/Misc/digi_clock.png" id="2_72lhn"]
+[ext_resource type="FontFile" uid="uid://n5py003eqye6" path="res://Fonts/SpaceMono-Regular.ttf" id="3_d3hu5"]
+[ext_resource type="FontFile" uid="uid://cy1jcm8tofucl" path="res://Fonts/Silkscreen-Regular.ttf" id="4_jgjxy"]
+
+[sub_resource type="GDScript" id="GDScript_wcd1f"]
+script/source = "extends Node
+
+@onready var label = $Label3
+@onready var timer = $Timer
+
+func _ready():
+	await get_tree().create_timer(1.0).timeout
+	timer.start()
+	
+func time_left_still():
+	var time_left = timer.time_left
+	var minute = floor(time_left / 60)
+	var second = int(time_left) % 60
+	
+	return [minute, second]
+	
+func _process(delta):
+	label.text = \"%02d:%02d\" % time_left_still()
+"
+
+[node name="Stopwatch" type="Node" unique_id=809101853]
+script = SubResource("GDScript_wcd1f")
+
+[node name="DigiClock" type="Sprite2D" parent="." unique_id=1023218604]
+position = Vector2(1.4588013, -2.3749847)
+scale = Vector2(0.15993622, 0.1309777)
+texture = ExtResource("2_72lhn")
+
+[node name="Label" type="Label" parent="." unique_id=1494001536]
+offset_left = -70.5412
+offset_top = 35.625015
+offset_right = -30.541199
+offset_bottom = 58.625
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_d3hu5")
+theme_override_font_sizes/font_size = 9
+text = "Start"
+
+[node name="Label2" type="Label" parent="." unique_id=1596557652]
+offset_left = 45.4588
+offset_top = 35.625015
+offset_right = 85.4588
+offset_bottom = 58.625
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_d3hu5")
+theme_override_font_sizes/font_size = 9
+text = "Stop"
+
+[node name="Label3" type="Label" parent="." unique_id=1789398151]
+offset_left = -118.5412
+offset_top = -42.374985
+offset_right = 121.4588
+offset_bottom = 22.625015
+theme_override_fonts/font = ExtResource("4_jgjxy")
+theme_override_font_sizes/font_size = 50
+text = "00:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="." unique_id=703027462]
+wait_time = 26.0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
