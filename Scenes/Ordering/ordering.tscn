@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bby3agvc17ic" path="res://Sprites/Orders/IMG_1281.png" id="1_cgp7d"]
 [ext_resource type="Script" uid="uid://cien4x0rhxu5r" path="res://Scripts/ordering.gd" id="1_unulo"]
 [ext_resource type="Texture2D" uid="uid://b3pwmaws0aien" path="res://Sprites/Orders/IMG_1282.png" id="2_k5t1g"]
+[ext_resource type="Texture2D" uid="uid://d1p77k0xebhd3" path="res://Sprites/Misc/IMG_1265.png" id="4_jx071"]
 [ext_resource type="Texture2D" uid="uid://ce4lrtgp5m673" path="res://Sprites/Misc/IMG_1274.png" id="4_unulo"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k5t1g"]
@@ -27,6 +28,11 @@ texture = ExtResource("2_k5t1g")
 position = Vector2(2.699997, 0)
 scale = Vector2(1.01875, 1)
 polygon = PackedVector2Array(-8, 376, 344, 184, 376, 504, 152, 656, -24, 664)
+
+[node name="Window" type="Sprite2D" parent="." unique_id=1145054817]
+position = Vector2(1280, 160)
+scale = Vector2(0.5794373, 0.4908875)
+texture = ExtResource("4_jx071")
 
 [node name="Plant" type="Sprite2D" parent="." unique_id=1153763218]
 position = Vector2(1058, 233.07712)

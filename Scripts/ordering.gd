@@ -38,7 +38,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		GameManage.customer_is_waiting = true
 		
 		var random_color = colors[randi() % colors.size()]
-		var final_order = random_color + " plastic"
+		var final_order = random_color + " Plastic"
 		GameManage.current_order_text = final_order
 		
 		await get_tree().create_timer(1.0).timeout

@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bsbg4pug1lvsw" path="res://Sprites/Sorting/whi_bin.png" id="2_vnq5x"]
 [ext_resource type="Texture2D" uid="uid://drf5r3gmwrv4" path="res://Sprites/Sorting/cont_bin.png" id="3_ione4"]
 [ext_resource type="Texture2D" uid="uid://bxi33eeyx6cvd" path="res://Sprites/Sorting/col_bin.png" id="4_268yn"]
+[ext_resource type="Texture2D" uid="uid://8b16je7gwnew" path="res://Sprites/Misc/digi_clock.png" id="5_ione4"]
 
 [node name="Sorting" type="Node2D" unique_id=669842154]
 
@@ -13,7 +14,7 @@ scale = Vector2(0.47603303, 0.38848916)
 texture = ExtResource("1_0rsmd")
 
 [node name="WhiBin" type="Sprite2D" parent="." unique_id=789708633]
-position = Vector2(200, 224)
+position = Vector2(527.99994, 215.99998)
 scale = Vector2(0.4722222, 0.47222224)
 texture = ExtResource("2_vnq5x")
 
@@ -23,5 +24,11 @@ scale = Vector2(0.5223064, 0.4868723)
 texture = ExtResource("3_ione4")
 
 [node name="ColBin" type="Sprite2D" parent="." unique_id=1694400225]
-position = Vector2(1360, 344)
+position = Vector2(221.75, 203.2047)
+scale = Vector2(0.4639262, 0.4563841)
 texture = ExtResource("4_268yn")
+
+[node name="DigiClock" type="Sprite2D" parent="." unique_id=1924922597]
+position = Vector2(120, 440)
+scale = Vector2(0.09192349, 0.09192348)
+texture = ExtResource("5_ione4")
