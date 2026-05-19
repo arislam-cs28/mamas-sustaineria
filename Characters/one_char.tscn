@@ -2,16 +2,12 @@
 
 [ext_resource type="Script" uid="uid://m5k12gms3qam" path="res://Scripts/one_char.gd" id="1_ewaxx"]
 [ext_resource type="Texture2D" uid="uid://bvnokrto885te" path="res://Characters/ch1.png" id="1_nlhix"]
-[ext_resource type="Texture2D" uid="uid://cjtq36crgr3os" path="res://Characters/ch11.png" id="2_odciu"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kyqdq"]
 animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_nlhix")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_odciu")
 }],
 "loop": true,
 "name": &"walk",
@@ -30,6 +26,7 @@ script = ExtResource("1_ewaxx")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1609916741]
 sprite_frames = SubResource("SpriteFrames_kyqdq")
 animation = &"walk"
+frame_progress = 0.8784556
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1521466550]
 position = Vector2(-4.7683716e-07, -4.7683716e-07)

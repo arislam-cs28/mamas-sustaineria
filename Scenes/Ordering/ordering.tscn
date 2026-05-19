@@ -5,9 +5,17 @@
 [ext_resource type="Texture2D" uid="uid://b3pwmaws0aien" path="res://Sprites/Orders/IMG_1282.png" id="2_k5t1g"]
 [ext_resource type="Texture2D" uid="uid://d1p77k0xebhd3" path="res://Sprites/Misc/IMG_1265.png" id="4_jx071"]
 [ext_resource type="Texture2D" uid="uid://ce4lrtgp5m673" path="res://Sprites/Misc/IMG_1274.png" id="4_unulo"]
+[ext_resource type="FontFile" uid="uid://cy1jcm8tofucl" path="res://Fonts/Silkscreen-Regular.ttf" id="6_128v6"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k5t1g"]
 texture = ExtResource("1_cgp7d")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xkalu"]
+bg_color = Color(0.25808322, 0.5901318, 0.30683917, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
 [node name="Ordering" type="Node2D" unique_id=123447793]
 script = ExtResource("1_unulo")
@@ -39,4 +47,57 @@ position = Vector2(1058, 233.07712)
 scale = Vector2(0.35697925, 0.35581827)
 texture = ExtResource("4_unulo")
 
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1832675827]
+visible = false
+offset_left = 105.0
+offset_top = 575.0
+offset_right = 1067.0
+offset_bottom = 652.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_xkalu")
+metadata/_edit_group_ = true
+
+[node name="Sorting" type="Button" parent="." unique_id=1728763468]
+visible = false
+offset_left = 134.0
+offset_top = 591.0
+offset_right = 288.0
+offset_bottom = 641.0
+theme_override_fonts/font = ExtResource("6_128v6")
+theme_override_font_sizes/font_size = 30
+text = "Sorting"
+
+[node name="Processing" type="Button" parent="." unique_id=1777880245]
+visible = false
+offset_left = 346.0
+offset_top = 592.0
+offset_right = 568.0
+offset_bottom = 642.0
+theme_override_fonts/font = ExtResource("6_128v6")
+theme_override_font_sizes/font_size = 30
+text = "Processing"
+
+[node name="Melting" type="Button" parent="." unique_id=1396077027]
+visible = false
+offset_left = 637.0
+offset_top = 592.0
+offset_right = 788.0
+offset_bottom = 642.0
+theme_override_fonts/font = ExtResource("6_128v6")
+theme_override_font_sizes/font_size = 30
+text = "Melting"
+
+[node name="Coloring" type="Button" parent="." unique_id=1205516532]
+visible = false
+offset_left = 852.0
+offset_top = 592.0
+offset_right = 1029.0
+offset_bottom = 642.0
+theme_override_fonts/font = ExtResource("6_128v6")
+theme_override_font_sizes/font_size = 30
+text = "Coloring"
+
 [connection signal="body_entered" from="Top" to="." method="_on_area_2d_body_entered"]
+[connection signal="pressed" from="Sorting" to="." method="_on_sorting_pressed"]
+[connection signal="pressed" from="Processing" to="." method="_on_processing_pressed"]
+[connection signal="pressed" from="Melting" to="." method="_on_melting_pressed"]
+[connection signal="pressed" from="Coloring" to="." method="_on_coloring_pressed"]

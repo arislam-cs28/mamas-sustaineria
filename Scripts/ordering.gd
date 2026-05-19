@@ -18,6 +18,11 @@ func _ready() -> void:
 			# standing after order
 			instance.global_position = Vector2(600, 210) 
 			instance.moves = false
+			$PanelContainer.visible = true
+			$Sorting.visible = true
+			$Processing.visible = true
+			$Melting.visible = true
+			$Coloring.visible = true
 		else:
 			#place on right side of screen
 			instance.global_position = Vector2(1200, 350) 
@@ -43,3 +48,16 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		
 		await get_tree().create_timer(1.0).timeout
 		get_tree().change_scene_to_file("res://Scenes/Ordering/orderingScreen.tscn")
+
+
+func _on_sorting_pressed() -> void:
+	get_tree().change_scene_to_file("res://Sprites/Sorting/sorting.tscn")
+
+func _on_processing_pressed() -> void:
+	get_tree().change_scene_to_file("res://Sprites/Processing/washing.tscn")
+	
+func _on_melting_pressed() -> void:
+	get_tree().change_scene_to_file("res://Sprites/Melting/melting.tscn")
+
+func _on_coloring_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/coloring.tscn")

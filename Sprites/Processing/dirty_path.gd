@@ -1,6 +1,6 @@
 extends Path2D
 
-@export var piece_scene = preload("res://Sprites/Processing/fallingInMachine.tscn")
+@export var piece_scene = preload("res://Sprites/Processing/dirtyplastic.tscn")
 
 @export var speed: float = 400.0 
 
@@ -24,6 +24,7 @@ func spawn_piece():
 	new_pieceOnPath.add_child(new_piece)
 	#put on path
 	add_child(new_pieceOnPath)
+
 
 func _on_timer_timeout() -> void:
 	spawn_piece()

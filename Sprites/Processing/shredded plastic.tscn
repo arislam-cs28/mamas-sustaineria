@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cownj3ff8itrl"]
+
+[ext_resource type="Texture2D" uid="uid://dtuuutj3t6o1a" path="res://Sprites/Processing/Screenshot_2026-05-19_at_5.47.52_PM-removebg-preview.png" id="1_gy2xo"]
+
+[node name="ShreddedPlastic" type="Node2D" unique_id=2051345419]
+
+[node name="Screenshot20260519At5_47_52PmRemovebgPreview" type="Sprite2D" parent="." unique_id=327758160]
+position = Vector2(230.18748, 127.13677)
+scale = Vector2(0.1501572, 0.106586464)
+texture = ExtResource("1_gy2xo")

@@ -2,15 +2,16 @@
 
 [ext_resource type="Script" uid="uid://cvoon7w76gavw" path="res://Sprites/Processing/processing.gd" id="1_vfgll"]
 [ext_resource type="Texture2D" uid="uid://bo5sm84a4le0f" path="res://Sprites/Processing/process_bg.png" id="2_8hmuh"]
-[ext_resource type="Script" uid="uid://bclmfxobp6oyt" path="res://Sprites/Processing/path_2d.gd" id="3_ponvj"]
 [ext_resource type="Texture2D" uid="uid://dnavswrpsoogq" path="res://Sprites/Processing/processor.png" id="4_56k87"]
+[ext_resource type="Script" uid="uid://bq6j80d68gsk0" path="res://Sprites/Processing/shredpath.gd" id="4_vfgll"]
 [ext_resource type="FontFile" uid="uid://cy1jcm8tofucl" path="res://Fonts/Silkscreen-Regular.ttf" id="5_jxibg"]
+[ext_resource type="Script" uid="uid://o3f5jn34cg20" path="res://Sprites/Processing/shredpathaftershredding.gd" id="6_8hmuh"]
 
 [sub_resource type="Curve2D" id="Curve2D_70vdi"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 225, 560, 0, 0, -11.7357235, 45.876007, 752, 599)
+"points": PackedVector2Array(0, 0, 0, 0, 385.24646, 564.69507, 0, 0, 0, 0, 585.4598, 583.8939, 0, 0, -11.7357235, 45.876007, 752, 599)
 }
-point_count = 2
+point_count = 3
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8r33l"]
 bg_color = Color(0.25808322, 0.5901318, 0.30683917, 1)
@@ -18,6 +19,12 @@ corner_radius_top_left = 20
 corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
+
+[sub_resource type="Curve2D" id="Curve2D_ponvj"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 672, 513, 0, 0, 0, 0, 1378, 518)
+}
+point_count = 2
 
 [node name="Processing" type="Node2D" unique_id=116970252]
 script = ExtResource("1_vfgll")
@@ -33,10 +40,10 @@ scale = Vector2(0.45585814, 0.4017408)
 texture = ExtResource("4_56k87")
 
 [node name="Path2D" type="Path2D" parent="." unique_id=199455987]
-position = Vector2(-685, -585)
+position = Vector2(-649, -587)
 scale = Vector2(1.0097432, 0.8996006)
 curve = SubResource("Curve2D_70vdi")
-script = ExtResource("3_ponvj")
+script = ExtResource("4_vfgll")
 
 [node name="Timer" type="Timer" parent="Path2D" unique_id=2140647]
 autostart = true
@@ -85,8 +92,39 @@ theme_override_fonts/font = ExtResource("5_jxibg")
 theme_override_font_sizes/font_size = 30
 text = "Coloring"
 
+[node name="shred button" type="Button" parent="." unique_id=2066702910]
+offset_left = 706.0
+offset_top = 50.0
+offset_right = 1072.0
+offset_bottom = 139.0
+theme_override_fonts/font = ExtResource("5_jxibg")
+theme_override_font_sizes/font_size = 25
+text = "Click here to shred!"
+
+[node name="shredpath" type="Path2D" parent="." unique_id=1656588944]
+position = Vector2(-235, -86)
+curve = SubResource("Curve2D_ponvj")
+script = ExtResource("6_8hmuh")
+
+[node name="Timer" type="Timer" parent="shredpath" unique_id=547303391]
+
+[node name="PanelContainer2" type="PanelContainer" parent="." unique_id=444865730]
+visible = false
+offset_left = 645.0
+offset_top = 323.0
+offset_right = 921.0
+offset_bottom = 406.0
+
+[node name="Label" type="Label" parent="PanelContainer2" unique_id=821781732]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_jxibg")
+theme_override_font_sizes/font_size = 25
+horizontal_alignment = 1
+
 [connection signal="timeout" from="Path2D/Timer" to="Path2D" method="_on_timer_timeout"]
 [connection signal="pressed" from="Sorting" to="." method="_on_sorting_pressed"]
 [connection signal="pressed" from="Processing" to="." method="_on_processing_pressed"]
 [connection signal="pressed" from="Melting" to="." method="_on_melting_pressed"]
 [connection signal="pressed" from="Coloring" to="." method="_on_coloring_pressed"]
+[connection signal="pressed" from="shred button" to="." method="_on_shred_button_pressed"]
+[connection signal="timeout" from="shredpath/Timer" to="shredpath" method="_on_timer_timeout"]
