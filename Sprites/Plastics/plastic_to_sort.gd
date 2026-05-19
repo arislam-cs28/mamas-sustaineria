@@ -7,4 +7,4 @@ var plastic_name = ""
 func _ready() -> void:
 	texture = plastics_available.pick_random()
 	plastic_name = str(texture)
-	print(plastic_name)
+	print(plastic_name) 
