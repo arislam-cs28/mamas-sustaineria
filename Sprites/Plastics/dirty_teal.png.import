@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://u5ncd2ng6q78"
-path="res://.godot/imported/plastic_piece.png-5b9dc6fbda0fd273f17667cc90d0ed4c.ctex"
+uid="uid://co2fgtrqvj5i0"
+path="res://.godot/imported/dirty_teal.png-81c95f0da79b20053bf8e232c51610bb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Sorting/plastic_piece.png"
-dest_files=["res://.godot/imported/plastic_piece.png-5b9dc6fbda0fd273f17667cc90d0ed4c.ctex"]
+source_file="res://Sprites/Plastics/dirty_teal.png"
+dest_files=["res://.godot/imported/dirty_teal.png-81c95f0da79b20053bf8e232c51610bb.ctex"]
 
 [params]
 

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://6s0ediiumuxe"]
+
+[ext_resource type="Script" uid="uid://5ha5oqxxn37c" path="res://Sprites/Plastics/plastic_to_sort.gd" id="1_6cfwg"]
+[ext_resource type="Texture2D" uid="uid://bu33on3talq5l" path="res://Sprites/Plastics/red.png" id="2_737je"]
+[ext_resource type="Texture2D" uid="uid://bdfl6tb5wf8ds" path="res://Sprites/Plastics/teal.png" id="3_r2xkd"]
+[ext_resource type="Texture2D" uid="uid://c0jn24ugdqo42" path="res://Sprites/Plastics/white.png" id="4_qssyq"]
+[ext_resource type="Texture2D" uid="uid://lrbw36i2ydko" path="res://Sprites/Plastics/dirty_white.png" id="5_lfp2a"]
+[ext_resource type="Texture2D" uid="uid://boomir6ni2pib" path="res://Sprites/Plastics/dirty_red.png" id="6_jr67b"]
+[ext_resource type="Texture2D" uid="uid://co2fgtrqvj5i0" path="res://Sprites/Plastics/dirty_teal.png" id="7_8ek2f"]
+
+[node name="PlasticToSort" type="Sprite2D" unique_id=1084144945]
+script = ExtResource("1_6cfwg")
+plastics_available = Array[Texture2D]([ExtResource("2_737je"), ExtResource("3_r2xkd"), ExtResource("4_qssyq"), ExtResource("5_lfp2a"), ExtResource("6_jr67b"), ExtResource("7_8ek2f")])

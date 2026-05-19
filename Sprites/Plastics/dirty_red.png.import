@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://boomir6ni2pib"
-path="res://.godot/imported/IMG_1703.png-ba10edb55a0de3a18a8e914a677ab51d.ctex"
+path="res://.godot/imported/dirty_red.png-e79d7148bdc724d2acb0eba5eb2a1c70.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Plastics/IMG_1703.png"
-dest_files=["res://.godot/imported/IMG_1703.png-ba10edb55a0de3a18a8e914a677ab51d.ctex"]
+source_file="res://Sprites/Plastics/dirty_red.png"
+dest_files=["res://.godot/imported/dirty_red.png-e79d7148bdc724d2acb0eba5eb2a1c70.ctex"]
 
 [params]
 

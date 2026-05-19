@@ -75,6 +75,7 @@ position = Vector2(185, 440.00003)
 scale = Vector2(0.75, 0.75)
 
 [node name="sort_instruct" type="RigidBody2D" parent="." unique_id=1141570330]
+visible = false
 freeze = true
 
 [node name="ColorRect" type="ColorRect" parent="sort_instruct" unique_id=1703617687]
