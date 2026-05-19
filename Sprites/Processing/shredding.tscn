@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://r5tst5meo6vm"]
 
-[ext_resource type="Script" uid="uid://cvoon7w76gavw" path="res://Sprites/Processing/processing.gd" id="1_4macn"]
-[ext_resource type="Texture2D" uid="uid://bo5sm84a4le0f" path="res://Sprites/Processing/process_bg.png" id="2_70vdi"]
-[ext_resource type="Texture2D" uid="uid://dnavswrpsoogq" path="res://Sprites/Processing/processor.png" id="3_447fw"]
-[ext_resource type="FontFile" uid="uid://cy1jcm8tofucl" path="res://Fonts/Silkscreen-Regular.ttf" id="4_oqehh"]
-[ext_resource type="Script" uid="uid://bclmfxobp6oyt" path="res://Sprites/Processing/path_2d.gd" id="5_70vdi"]
+[ext_resource type="Script" uid="uid://cvoon7w76gavw" path="res://Sprites/Processing/processing.gd" id="1_vfgll"]
+[ext_resource type="Texture2D" uid="uid://bo5sm84a4le0f" path="res://Sprites/Processing/process_bg.png" id="2_8hmuh"]
+[ext_resource type="Script" uid="uid://bclmfxobp6oyt" path="res://Sprites/Processing/path_2d.gd" id="3_ponvj"]
+[ext_resource type="Texture2D" uid="uid://dnavswrpsoogq" path="res://Sprites/Processing/processor.png" id="4_56k87"]
+[ext_resource type="FontFile" uid="uid://cy1jcm8tofucl" path="res://Fonts/Silkscreen-Regular.ttf" id="5_jxibg"]
 
 [sub_resource type="Curve2D" id="Curve2D_70vdi"]
 _data = {
@@ -20,17 +20,17 @@ corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
 [node name="Processing" type="Node2D" unique_id=116970252]
-script = ExtResource("1_4macn")
+script = ExtResource("1_vfgll")
 
 [node name="ProcessBg" type="Sprite2D" parent="." unique_id=359378754]
 position = Vector2(574.00006, 323.99997)
 scale = Vector2(0.47768596, 0.38848925)
-texture = ExtResource("2_70vdi")
+texture = ExtResource("2_8hmuh")
 
 [node name="Path2D" type="Path2D" parent="." unique_id=199455987]
-position = Vector2(-63, -268)
+position = Vector2(-176, -267)
 curve = SubResource("Curve2D_70vdi")
-script = ExtResource("5_70vdi")
+script = ExtResource("3_ponvj")
 
 [node name="Timer" type="Timer" parent="Path2D" unique_id=2140647]
 wait_time = 0.5
@@ -39,7 +39,7 @@ autostart = true
 [node name="Processor" type="Sprite2D" parent="." unique_id=1244280980]
 position = Vector2(427.51566, 333.94818)
 scale = Vector2(0.45585814, 0.4017408)
-texture = ExtResource("3_447fw")
+texture = ExtResource("4_56k87")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=1899295274]
 offset_left = 105.0
@@ -54,7 +54,7 @@ offset_left = 134.0
 offset_top = 591.0
 offset_right = 288.0
 offset_bottom = 641.0
-theme_override_fonts/font = ExtResource("4_oqehh")
+theme_override_fonts/font = ExtResource("5_jxibg")
 theme_override_font_sizes/font_size = 30
 text = "Sorting"
 
@@ -63,7 +63,7 @@ offset_left = 346.0
 offset_top = 592.0
 offset_right = 568.0
 offset_bottom = 642.0
-theme_override_fonts/font = ExtResource("4_oqehh")
+theme_override_fonts/font = ExtResource("5_jxibg")
 theme_override_font_sizes/font_size = 30
 text = "Processing"
 
@@ -72,7 +72,7 @@ offset_left = 637.0
 offset_top = 592.0
 offset_right = 788.0
 offset_bottom = 642.0
-theme_override_fonts/font = ExtResource("4_oqehh")
+theme_override_fonts/font = ExtResource("5_jxibg")
 theme_override_font_sizes/font_size = 30
 text = "Melting"
 
@@ -81,18 +81,9 @@ offset_left = 852.0
 offset_top = 592.0
 offset_right = 1029.0
 offset_bottom = 642.0
-theme_override_fonts/font = ExtResource("4_oqehh")
+theme_override_fonts/font = ExtResource("5_jxibg")
 theme_override_font_sizes/font_size = 30
 text = "Coloring"
-
-[node name="Sorting2" type="Button" parent="." unique_id=1184734250]
-offset_left = 959.0
-offset_top = 26.0
-offset_right = 1113.0
-offset_bottom = 76.0
-theme_override_fonts/font = ExtResource("4_oqehh")
-theme_override_font_sizes/font_size = 30
-text = "Washing"
 
 [connection signal="timeout" from="Path2D/Timer" to="Path2D" method="_on_timer_timeout"]
 [connection signal="pressed" from="Sorting" to="." method="_on_sorting_pressed"]
