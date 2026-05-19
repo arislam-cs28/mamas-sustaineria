@@ -1,12 +1,14 @@
 [gd_scene format=3 uid="uid://ca6xapqnexgye"]
 
 [ext_resource type="Texture2D" uid="uid://u3k832rk7uya" path="res://Characters/reese_sykle.png" id="1_6fjr2"]
+[ext_resource type="Script" uid="uid://uiuk6xyvi2ik" path="res://Characters/Headshots/player.gd" id="1_dcqb3"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6fjr2"]
 radius = 800.0
 height = 3104.0
 
 [node name="Player" type="CharacterBody2D" unique_id=74943810]
+script = ExtResource("1_dcqb3")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=748033599]
 texture = ExtResource("1_6fjr2")

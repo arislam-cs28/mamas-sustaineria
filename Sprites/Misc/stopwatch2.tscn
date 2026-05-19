@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://dlee317uw5oq3"]
+[gd_scene format=3 uid="uid://dnyh2je1sp1q8"]
 
-[ext_resource type="Script" uid="uid://cms63tboy5ir8" path="res://Sprites/Misc/stopwatch_2.gd" id="1_3w88n"]
+[ext_resource type="Script" path="res://Sprites/Misc/stopwatch_2.gd" id="1_3w88n"]
 [ext_resource type="Texture2D" uid="uid://8b16je7gwnew" path="res://Sprites/Misc/digi_clock.png" id="2_0248h"]
 [ext_resource type="FontFile" uid="uid://n5py003eqye6" path="res://Fonts/SpaceMono-Regular.ttf" id="3_akwtp"]
 [ext_resource type="FontFile" uid="uid://cy1jcm8tofucl" path="res://Fonts/Silkscreen-Regular.ttf" id="4_ndykg"]

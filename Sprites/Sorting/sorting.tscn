@@ -1,10 +1,15 @@
 [gd_scene format=3 uid="uid://u2jy600ycx88"]
 
 [ext_resource type="Texture2D" uid="uid://bdyb8mkxhettn" path="res://Sprites/Sorting/sort_bg.png" id="1_0rsmd"]
+[ext_resource type="Script" uid="uid://y8qe3gvpxtfe" path="res://Sprites/Sorting/sorting.gd" id="1_l4ita"]
 [ext_resource type="Texture2D" uid="uid://bsbg4pug1lvsw" path="res://Sprites/Sorting/whi_bin.png" id="2_vnq5x"]
 [ext_resource type="Texture2D" uid="uid://drf5r3gmwrv4" path="res://Sprites/Sorting/cont_bin.png" id="3_ione4"]
 [ext_resource type="Texture2D" uid="uid://bxi33eeyx6cvd" path="res://Sprites/Sorting/col_bin.png" id="4_268yn"]
-[ext_resource type="PackedScene" path="res://Sprites/Misc/stopwatch2.tscn" id="5_ione4"]
+[ext_resource type="PackedScene" uid="uid://dnyh2je1sp1q8" path="res://Sprites/Misc/stopwatch2.tscn" id="5_ione4"]
+[ext_resource type="Texture2D" uid="uid://bdryt0l503t5p" path="res://Sprites/Misc/IMG_1600.png" id="7_wgmlu"]
+[ext_resource type="FontFile" uid="uid://n5py003eqye6" path="res://Fonts/SpaceMono-Regular.ttf" id="8_4u31e"]
+[ext_resource type="FontFile" uid="uid://cy1jcm8tofucl" path="res://Fonts/Silkscreen-Regular.ttf" id="9_akrjc"]
+[ext_resource type="FontFile" uid="uid://bvfd1ybmcxsa6" path="res://Fonts/SpaceMono-Bold.ttf" id="9_wgmlu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ione4"]
 size = Vector2(576.0001, 288.00003)
@@ -15,7 +20,11 @@ size = Vector2(597.35046, 295.76544)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nxh0s"]
 size = Vector2(580.2532, 297.99457)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l4ita"]
+size = Vector2(648, 440)
+
 [node name="Sorting" type="Node2D" unique_id=669842154]
+script = ExtResource("1_l4ita")
 
 [node name="SortBg" type="Sprite2D" parent="." unique_id=989731667]
 position = Vector2(576, 324)
@@ -64,3 +73,49 @@ shape = SubResource("RectangleShape2D_nxh0s")
 [node name="Stopwatch2" parent="." unique_id=1619344646 instance=ExtResource("5_ione4")]
 position = Vector2(185, 440.00003)
 scale = Vector2(0.75, 0.75)
+
+[node name="sort_instruct" type="RigidBody2D" parent="." unique_id=1141570330]
+freeze = true
+
+[node name="ColorRect" type="ColorRect" parent="sort_instruct" unique_id=1703617687]
+modulate = Color(0.2686, 0.5727501, 0.79, 0.36862746)
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sort_instruct" unique_id=443548284]
+position = Vector2(564, 316)
+shape = SubResource("RectangleShape2D_l4ita")
+
+[node name="TextureRect" type="TextureRect" parent="sort_instruct" unique_id=1591964735]
+offset_left = 240.0
+offset_top = 96.0
+offset_right = 889.0
+offset_bottom = 536.0
+texture = ExtResource("7_wgmlu")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="sort_instruct" unique_id=731504300]
+offset_left = 312.0
+offset_top = 232.0
+offset_right = 792.0
+offset_bottom = 459.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 13
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 5
+theme_override_fonts/normal_font = ExtResource("8_4u31e")
+theme_override_fonts/bold_font = ExtResource("9_wgmlu")
+theme_override_font_sizes/normal_font_size = 23
+text = "When plastics are first recycled, they need to be sorted to remove contaminants! Sort all of the plastics into the right bins before the timer ends to move onto the next stage!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="sort_instruct" unique_id=667973467]
+offset_left = 310.0
+offset_top = 152.0
+offset_right = 805.0
+offset_bottom = 229.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("9_akrjc")
+theme_override_font_sizes/font_size = 60
+text = "Instructions"
