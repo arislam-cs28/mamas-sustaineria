@@ -8,9 +8,9 @@
 
 [sub_resource type="Curve2D" id="Curve2D_70vdi"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 50, 240, 0, 0, 0, 0, 94, 240, 0, 0, 0, 0, 150, 240, 0, 0, 0, 0, 194, 240, 0, 0, 0, 0, 248, 239, 0, 0, 0, 0, 294, 239, 0, 0, 0, 0, 325, 241, 0, 0, 0, 0, 373, 248, 0, 0, 0, 0, 409, 277, 0, 0, 0, 0, -44, 228, 0, 0, 0, 0, -217, 218)
+"points": PackedVector2Array(0, 0, 0, 0, 225, 560, 0, 0, -11.7357235, 45.876007, 752, 599)
 }
-point_count = 11
+point_count = 2
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8r33l"]
 bg_color = Color(0.25808322, 0.5901318, 0.30683917, 1)
@@ -27,19 +27,19 @@ position = Vector2(574.00006, 323.99997)
 scale = Vector2(0.47768596, 0.38848925)
 texture = ExtResource("2_8hmuh")
 
-[node name="Path2D" type="Path2D" parent="." unique_id=199455987]
-position = Vector2(-176, -267)
-curve = SubResource("Curve2D_70vdi")
-script = ExtResource("3_ponvj")
-
-[node name="Timer" type="Timer" parent="Path2D" unique_id=2140647]
-wait_time = 0.5
-autostart = true
-
 [node name="Processor" type="Sprite2D" parent="." unique_id=1244280980]
 position = Vector2(427.51566, 333.94818)
 scale = Vector2(0.45585814, 0.4017408)
 texture = ExtResource("4_56k87")
+
+[node name="Path2D" type="Path2D" parent="." unique_id=199455987]
+position = Vector2(-685, -585)
+scale = Vector2(1.0097432, 0.8996006)
+curve = SubResource("Curve2D_70vdi")
+script = ExtResource("3_ponvj")
+
+[node name="Timer" type="Timer" parent="Path2D" unique_id=2140647]
+autostart = true
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=1899295274]
 offset_left = 105.0

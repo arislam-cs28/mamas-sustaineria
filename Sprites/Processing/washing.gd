@@ -11,8 +11,6 @@ func _process(delta: float) -> void:
 	pass
 
 
-	get_tree().change_scene_to_file("res://Sprites/Processing/shredding.tscn")
-
 
 func _on_timer_timeout() -> void:
 	pass # Replace with function body.

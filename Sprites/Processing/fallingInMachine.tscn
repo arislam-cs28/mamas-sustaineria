@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://2kj2lpdtldpq"]
 
 [ext_resource type="Shader" uid="uid://blg8n57ner44b" path="res://Sprites/Processing/processing.gdshader" id="1_fs8u6"]
-[ext_resource type="Texture2D" uid="uid://u5ncd2ng6q78" path="res://Sprites/Sorting/plastic_piece.png" id="2_8hohl"]
+[ext_resource type="Texture2D" uid="uid://htd2bljcr3t7" path="res://Sprites/Processing/IMG_3684-removebg-preview.png" id="2_fs8u6"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_h5x1w"]
 shader = ExtResource("1_fs8u6")
@@ -10,6 +10,6 @@ shader = ExtResource("1_fs8u6")
 
 [node name="PlasticPiece2" type="Sprite2D" parent="." unique_id=1737870450]
 material = SubResource("ShaderMaterial_h5x1w")
-position = Vector2(180, 93)
-scale = Vector2(0.06702637, 0.068163425)
-texture = ExtResource("2_8hohl")
+position = Vector2(230.13846, 147.56996)
+scale = Vector2(0.2679821, 0.28688067)
+texture = ExtResource("2_fs8u6")
