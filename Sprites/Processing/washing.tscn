@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://c0s60xc6uu4dd"]
+
+[ext_resource type="Texture2D" uid="uid://8p62lr10qemy" path="res://Sprites/Processing/IMG_1316.png" id="1_ismch"]
+[ext_resource type="Script" uid="uid://bclmfxobp6oyt" path="res://Sprites/Processing/path_2d.gd" id="2_cbcec"]
+
+[sub_resource type="Curve2D" id="Curve2D_ordxu"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -54, 490, 0, 0, 0, 0, 123, 409, 0, 0, 0, 0, 231, 409, 0, 0, 0, 0, 300, 412)
+}
+point_count = 4
+
+[node name="Washing" type="Node2D" unique_id=665254198]
+
+[node name="Img1316" type="Sprite2D" parent="." unique_id=87150287]
+position = Vector2(575.99994, 324.00003)
+scale = Vector2(0.476033, 0.3884892)
+texture = ExtResource("1_ismch")
+
+[node name="Path2D" type="Path2D" parent="." unique_id=1834412922]
+position = Vector2(-128, -126)
+curve = SubResource("Curve2D_ordxu")
+script = ExtResource("2_cbcec")
+
+[node name="Timer" type="Timer" parent="Path2D" unique_id=1244471293]
+
+[connection signal="timeout" from="Path2D/Timer" to="Path2D" method="_on_timer_timeout"]

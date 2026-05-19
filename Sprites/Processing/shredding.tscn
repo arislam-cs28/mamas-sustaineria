@@ -4,6 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://bo5sm84a4le0f" path="res://Sprites/Processing/process_bg.png" id="2_70vdi"]
 [ext_resource type="Texture2D" uid="uid://dnavswrpsoogq" path="res://Sprites/Processing/processor.png" id="3_447fw"]
 [ext_resource type="FontFile" uid="uid://cy1jcm8tofucl" path="res://Fonts/Silkscreen-Regular.ttf" id="4_oqehh"]
+[ext_resource type="Script" uid="uid://bclmfxobp6oyt" path="res://Sprites/Processing/path_2d.gd" id="5_70vdi"]
+
+[sub_resource type="Curve2D" id="Curve2D_70vdi"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 50, 240, 0, 0, 0, 0, 94, 240, 0, 0, 0, 0, 150, 240, 0, 0, 0, 0, 194, 240, 0, 0, 0, 0, 248, 239, 0, 0, 0, 0, 294, 239, 0, 0, 0, 0, 325, 241, 0, 0, 0, 0, 373, 248, 0, 0, 0, 0, 409, 277, 0, 0, 0, 0, -44, 228, 0, 0, 0, 0, -217, 218)
+}
+point_count = 11
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8r33l"]
 bg_color = Color(0.25808322, 0.5901318, 0.30683917, 1)
@@ -19,6 +26,15 @@ script = ExtResource("1_4macn")
 position = Vector2(574.00006, 323.99997)
 scale = Vector2(0.47768596, 0.38848925)
 texture = ExtResource("2_70vdi")
+
+[node name="Path2D" type="Path2D" parent="." unique_id=199455987]
+position = Vector2(-63, -268)
+curve = SubResource("Curve2D_70vdi")
+script = ExtResource("5_70vdi")
+
+[node name="Timer" type="Timer" parent="Path2D" unique_id=2140647]
+wait_time = 0.5
+autostart = true
 
 [node name="Processor" type="Sprite2D" parent="." unique_id=1244280980]
 position = Vector2(427.51566, 333.94818)
@@ -69,6 +85,16 @@ theme_override_fonts/font = ExtResource("4_oqehh")
 theme_override_font_sizes/font_size = 30
 text = "Coloring"
 
+[node name="Sorting2" type="Button" parent="." unique_id=1184734250]
+offset_left = 959.0
+offset_top = 26.0
+offset_right = 1113.0
+offset_bottom = 76.0
+theme_override_fonts/font = ExtResource("4_oqehh")
+theme_override_font_sizes/font_size = 30
+text = "Washing"
+
+[connection signal="timeout" from="Path2D/Timer" to="Path2D" method="_on_timer_timeout"]
 [connection signal="pressed" from="Sorting" to="." method="_on_sorting_pressed"]
 [connection signal="pressed" from="Processing" to="." method="_on_processing_pressed"]
 [connection signal="pressed" from="Melting" to="." method="_on_melting_pressed"]

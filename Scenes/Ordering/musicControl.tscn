@@ -2,7 +2,10 @@
 
 [ext_resource type="AudioStream" uid="uid://u2nrj32sj26" path="res://Scenes/MAMASSUSTAINERIAThemeSong.ogg" id="1_2v7ur"]
 
-[node name="musicControl" type="AudioStreamPlayer2D" unique_id=1922440920]
+[node name="musicControl" type="Node2D" unique_id=201865094]
 process_mode = 3
+process_priority = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1901466635]
 stream = ExtResource("1_2v7ur")
 autoplay = true

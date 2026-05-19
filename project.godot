@@ -22,9 +22,9 @@ buses/default_bus_layout=""
 
 [autoload]
 
-Musiccontroller="*uid://ctpmch52kxqpi"
 TransitionScreen="*uid://cmkc4hgx7usim"
 GameManage="*uid://bvymbd1ek88kk"
+MusicControl="*uid://ck7kpr42pnf7o"
 
 [display]
 
