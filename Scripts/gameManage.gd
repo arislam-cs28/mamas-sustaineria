@@ -20,8 +20,6 @@ func go_to_next_day():
 	current_index += 1
 	get_tree().change_scene_to_file("res://Scenes/ordering.tscn")
 
-
-
 # to put in finish screen
 #func _on_finish_button_pressed():
 #		GameManage.customer_is_waiting = false
