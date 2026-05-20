@@ -1,4 +1,7 @@
-[gd_scene format=3 uid="uid://clmo4lq10vus"]
+[gd_scene format=3 uid="uid://ctpmch52kxqpi"]
+
+[ext_resource type="AudioStream" uid="uid://u2nrj32sj26" path="res://Scenes/MAMASSUSTAINERIAThemeSong.ogg" id="1_okccx"]
 
 [node name="Musiccontroller" type="AudioStreamPlayer2D" unique_id=2062769065]
+stream = ExtResource("1_okccx")
 autoplay = true
