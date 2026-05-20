@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://hbgtr10d667l"]
+
+[node name="Extruder" type="RigidBody2D" unique_id=784976862]
