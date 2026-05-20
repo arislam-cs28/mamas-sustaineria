@@ -6,7 +6,6 @@ var show_end = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	print($/root/GameManage.what_player)
-	$Panel.visible = false
 	if ($/root/GameManage.what_player == 0):
 		$sort_instruct.visible = true
 		$Stopwatch2/Timer.paused = true
@@ -19,8 +18,10 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	print($"/root/GameManage".total_score)
-	if show_end:
-		$Panel.visible = true
+	# if show_end: urgh i guess i cant do it...
+		# $Panel/RichTextLabelLabel.text = "Sorting complete! Time to process next!"
+	# else:
+		# $Panel/RichTextLabelLabel.text = "Fun fact: Did you know that machine learning can make sorting more efficient?"
 
 
 func _on_sorting_pressed() -> void:
