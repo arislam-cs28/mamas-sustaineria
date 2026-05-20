@@ -9,6 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://bxfb3slv5cxfo" path="res://Sprites/Processing/Screenshot_2026-05-19_at_4.39.43_PM-removebg-preview.png" id="6_imdih"]
 [ext_resource type="Texture2D" uid="uid://cx4577v5u6x54" path="res://Sprites/Processing/Screenshot 2026-05-19 at 4.22.21 PM.png" id="6_ny0st"]
 [ext_resource type="Texture2D" uid="uid://bw812xwcu10lq" path="res://Sprites/Processing/Screenshot 2026-05-19 at 5.08.25 PM.png" id="9_imdih"]
+[ext_resource type="Texture2D" uid="uid://bdryt0l503t5p" path="res://Sprites/Misc/IMG_1600.png" id="10_7l1w4"]
+[ext_resource type="FontFile" uid="uid://n5py003eqye6" path="res://Fonts/SpaceMono-Regular.ttf" id="11_dhbqg"]
+[ext_resource type="FontFile" uid="uid://bvfd1ybmcxsa6" path="res://Fonts/SpaceMono-Bold.ttf" id="12_buuan"]
 
 [sub_resource type="Curve2D" id="Curve2D_ordxu"]
 _data = {
@@ -31,6 +34,9 @@ corner_radius_bottom_left = 20
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5uksj"]
 texture = ExtResource("9_imdih")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_04dsv"]
+size = Vector2(648, 440)
 
 [node name="Washing" type="Node2D" unique_id=665254198]
 script = ExtResource("1_ordxu")
@@ -147,6 +153,52 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("6_2ppw1")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="processing instruct" type="RigidBody2D" parent="." unique_id=552314627]
+freeze = true
+
+[node name="ColorRect" type="ColorRect" parent="processing instruct" unique_id=643269843]
+modulate = Color(0.2686, 0.5727501, 0.79, 0.36862746)
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="processing instruct" unique_id=1939402063]
+position = Vector2(564, 316)
+shape = SubResource("RectangleShape2D_04dsv")
+
+[node name="TextureRect" type="TextureRect" parent="processing instruct" unique_id=328886750]
+offset_left = 240.0
+offset_top = 96.0
+offset_right = 889.0
+offset_bottom = 536.0
+texture = ExtResource("10_7l1w4")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="processing instruct" unique_id=2012446661]
+offset_left = 312.0
+offset_top = 232.0
+offset_right = 792.0
+offset_bottom = 459.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 13
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 5
+theme_override_fonts/normal_font = ExtResource("11_dhbqg")
+theme_override_fonts/bold_font = ExtResource("12_buuan")
+theme_override_font_sizes/normal_font_size = 23
+text = "Plastics are next washed and shredded. Click \"Start Washer\" when in the green to wash all the plastic. Then, click quickly to shred as much plastic as possible!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="processing instruct" unique_id=1679255973]
+offset_left = 310.0
+offset_top = 152.0
+offset_right = 805.0
+offset_bottom = 229.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_2ppw1")
+theme_override_font_sizes/font_size = 60
+text = "Instructions"
 
 [connection signal="timeout" from="dirty path/Timer" to="dirty path" method="_on_timer_timeout"]
 [connection signal="timeout" from="Path2D2/Timer" to="Path2D2" method="_on_timer_timeout"]

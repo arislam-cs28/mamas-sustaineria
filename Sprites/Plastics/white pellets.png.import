@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b621ly5wchlnp"
-path="res://.godot/imported/IMG_1691.png-a2d92cc42818aa1fc3aa361f2b6b46a8.ctex"
+uid="uid://cgi7ubwjgaysg"
+path="res://.godot/imported/white pellets.png-1634b31614bc7a145ad2174482765a67.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Plastics/IMG_1691.png"
-dest_files=["res://.godot/imported/IMG_1691.png-a2d92cc42818aa1fc3aa361f2b6b46a8.ctex"]
+source_file="res://Sprites/Plastics/white pellets.png"
+dest_files=["res://.godot/imported/white pellets.png-1634b31614bc7a145ad2174482765a67.ctex"]
 
 [params]
 

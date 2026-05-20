@@ -1,9 +1,9 @@
 extends Node2D
 
-var colors = ["Red", "Blue", "Green", "Yellow", "Pink", "Purple", "Orange", "White", "Black"] 
+var colors = ["White", "Yellow", "Red", "Orange"] 
 
 func _ready() -> void:
-	# Force reset the waiting flag if we are starting a brand new order loop
+	# reset waiting flag if starting brand new order loop
 	if GameManage.current_order_text == "":
 		GameManage.customer_is_waiting = false
 
@@ -27,7 +27,7 @@ func _ready() -> void:
 			#place on right side of screen
 			instance.global_position = Vector2(1200, 350) 
 			
-			# reboot vars
+			# reboot variables
 			instance.moves = true
 			if "speed" in instance:
 				instance.speed = 200.0 
@@ -42,7 +42,8 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		body.moves = false
 		GameManage.customer_is_waiting = true
 		
-		var random_color = colors[randi() % colors.size()]
+		var random_color = colors[randi() % colors.size()]	
+		GameManage.saved_color = random_color
 		var final_order = random_color + " Plastic"
 		GameManage.current_order_text = final_order
 		
@@ -61,4 +62,6 @@ func _on_melting_pressed() -> void:
 	get_tree().change_scene_to_file("res://Sprites/Melting/melting.tscn")
 
 func _on_coloring_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/coloring.tscn")
+	get_tree().change_scene_to_file("res://Scenes/coloring/coloring.tscn")
+	
+# buttons to respective scenes
