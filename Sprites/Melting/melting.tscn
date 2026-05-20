@@ -1,11 +1,205 @@
 [gd_scene format=3 uid="uid://dpkeuom4wrtqt"]
 
 [ext_resource type="Texture2D" uid="uid://dduo05ge5ux77" path="res://Sprites/Melting/IMG_1327.png" id="1_21h87"]
+[ext_resource type="Script" uid="uid://dlfov7r4e1kol" path="res://Sprites/Melting/melting.gd" id="1_jd6ql"]
+[ext_resource type="PackedScene" uid="uid://hbgtr10d667l" path="res://Sprites/Melting/extruder.tscn" id="2_xq7ju"]
+[ext_resource type="Texture2D" uid="uid://bsbg4pug1lvsw" path="res://Sprites/Sorting/whi_bin.png" id="3_b0mid"]
+[ext_resource type="PackedScene" uid="uid://cb2vcrtj2tb4r" path="res://Sprites/Melting/temp_control.tscn" id="5_td00v"]
+[ext_resource type="FontFile" uid="uid://cy1jcm8tofucl" path="res://Fonts/Silkscreen-Regular.ttf" id="7_5pd7y"]
+[ext_resource type="PackedScene" uid="uid://c3pi3vx5m4yc7" path="res://Sprites/Melting/stopwatch_melt.tscn" id="7_qi68h"]
+[ext_resource type="FontFile" uid="uid://bvfd1ybmcxsa6" path="res://Fonts/SpaceMono-Bold.ttf" id="8_5pd7y"]
+[ext_resource type="Script" uid="uid://cg2m7h00cewyx" path="res://Sprites/Melting/path_follow_2d.gd" id="9_7mtmy"]
+[ext_resource type="Texture2D" uid="uid://cgi7ubwjgaysg" path="res://Sprites/Plastics/white pellets.png" id="9_20uc5"]
+[ext_resource type="Texture2D" uid="uid://dtuuutj3t6o1a" path="res://Sprites/Processing/Screenshot_2026-05-19_at_5.47.52_PM-removebg-preview.png" id="10_20uc5"]
+[ext_resource type="Texture2D" uid="uid://bdryt0l503t5p" path="res://Sprites/Misc/IMG_1600.png" id="12_l3rtr"]
+[ext_resource type="FontFile" uid="uid://n5py003eqye6" path="res://Fonts/SpaceMono-Regular.ttf" id="13_ulxet"]
+
+[sub_resource type="Curve2D" id="Curve2D_l3rtr"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 904, 424, 0, 0, 0, 0, 912, 448, 0, 0, 0, 0, 920, 472, 0, 0, 0, 0, 928, 480, 0, 0, 0, 0, 952, 488, 0, 0, 0, 0, 1000, 504, 0, 0, 0, 0, 1024, 520, 0, 0, 0, 0, 1032, 528, 0, 0, 0, 0, 1040, 544, 0, 0, 0, 0, 1040, 552, 0, 0, 0, 0, 1048, 576)
+}
+point_count = 11
+
+[sub_resource type="Curve2D" id="Curve2D_2w0uq"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 120, -8, 0, 0, 0, 0, 120, 48, 0, 0, 0, 0, 128, 72, 0, 0, 0, 0, 136, 88, 0, 0, 0, 0, 136, 96)
+}
+point_count = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7mtmy"]
+bg_color = Color(0.25808322, 0.5901318, 0.30683917, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3ecum"]
+size = Vector2(648, 440)
 
 [node name="Melting" type="Node2D" unique_id=938524040]
+script = ExtResource("1_jd6ql")
 
 [node name="MeltBG" type="Sprite2D" parent="." unique_id=1574472013]
 position = Vector2(576.00006, 324)
 scale = Vector2(0.47603303, 0.38848922)
 texture = ExtResource("1_21h87")
 metadata/_edit_lock_ = true
+
+[node name="Extruder" parent="." unique_id=784976862 instance=ExtResource("2_xq7ju")]
+freeze = true
+
+[node name="WhiBin" type="Sprite2D" parent="." unique_id=1876924044]
+position = Vector2(1045, 665.68756)
+scale = Vector2(0.4097221, 0.4151155)
+texture = ExtResource("3_b0mid")
+
+[node name="TempControl" parent="." unique_id=359293073 instance=ExtResource("5_td00v")]
+offset_left = 568.0
+offset_top = 168.0
+offset_right = 568.0
+offset_bottom = 168.0
+scale = Vector2(0.10031765, 0.10031765)
+
+[node name="Button" type="Button" parent="." unique_id=1226525624]
+offset_left = 624.0
+offset_top = 48.0
+offset_right = 888.0
+offset_bottom = 89.0
+theme_override_fonts/font = ExtResource("7_5pd7y")
+theme_override_font_sizes/font_size = 25
+text = "Set Temperature"
+
+[node name="Stopwatch2" parent="." unique_id=1619344646 instance=ExtResource("7_qi68h")]
+position = Vector2(1000, 72)
+scale = Vector2(0.5516258, 0.5516258)
+
+[node name="Label" type="Label" parent="." unique_id=58744536]
+offset_left = 640.0
+offset_top = 128.0
+offset_right = 1114.0
+offset_bottom = 166.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_5pd7y")
+theme_override_font_sizes/font_size = 25
+
+[node name="Path2D2" type="Path2D" parent="." unique_id=1807036826]
+curve = SubResource("Curve2D_l3rtr")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D2" unique_id=768677516]
+position = Vector2(904, 424)
+rotation = 1.2490457
+script = ExtResource("9_7mtmy")
+
+[node name="Sprite2D" type="Sprite2D" parent="Path2D2/PathFollow2D" unique_id=117505916]
+scale = Vector2(0.06, 0.06)
+texture = ExtResource("9_20uc5")
+
+[node name="Path2D" type="Path2D" parent="." unique_id=1851399856]
+position = Vector2(0, -8)
+curve = SubResource("Curve2D_2w0uq")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=499568398]
+position = Vector2(120, -8)
+rotation = 1.5707964
+script = ExtResource("9_7mtmy")
+
+[node name="Sprite2D" type="Sprite2D" parent="Path2D/PathFollow2D" unique_id=1488136549]
+rotation = -2.536048
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("10_20uc5")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=652887084]
+offset_left = 105.0
+offset_top = 567.0
+offset_right = 1067.0
+offset_bottom = 644.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_7mtmy")
+metadata/_edit_group_ = true
+
+[node name="Sorting" type="Button" parent="." unique_id=70103177]
+offset_left = 134.0
+offset_top = 583.0
+offset_right = 288.0
+offset_bottom = 633.0
+theme_override_fonts/font = ExtResource("7_5pd7y")
+theme_override_font_sizes/font_size = 30
+text = "Sorting"
+
+[node name="Processing" type="Button" parent="." unique_id=671455014]
+offset_left = 346.0
+offset_top = 584.0
+offset_right = 568.0
+offset_bottom = 634.0
+theme_override_fonts/font = ExtResource("7_5pd7y")
+theme_override_font_sizes/font_size = 30
+text = "Processing"
+
+[node name="Melting" type="Button" parent="." unique_id=462142535]
+offset_left = 637.0
+offset_top = 584.0
+offset_right = 788.0
+offset_bottom = 634.0
+theme_override_fonts/font = ExtResource("7_5pd7y")
+theme_override_font_sizes/font_size = 30
+text = "Melting"
+
+[node name="Coloring" type="Button" parent="." unique_id=777435280]
+offset_left = 852.0
+offset_top = 584.0
+offset_right = 1029.0
+offset_bottom = 634.0
+theme_override_fonts/font = ExtResource("7_5pd7y")
+theme_override_font_sizes/font_size = 30
+text = "Coloring"
+
+[node name="sort_instruct" type="RigidBody2D" parent="." unique_id=584470116]
+freeze = true
+
+[node name="ColorRect" type="ColorRect" parent="sort_instruct" unique_id=1655748258]
+modulate = Color(0.2686, 0.5727501, 0.79, 0.36862746)
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sort_instruct" unique_id=2006759840]
+position = Vector2(564, 316)
+shape = SubResource("RectangleShape2D_3ecum")
+
+[node name="TextureRect" type="TextureRect" parent="sort_instruct" unique_id=90864560]
+offset_left = 240.0
+offset_top = 96.0
+offset_right = 889.0
+offset_bottom = 536.0
+texture = ExtResource("12_l3rtr")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="sort_instruct" unique_id=795111018]
+offset_left = 312.0
+offset_top = 218.0
+offset_right = 792.0
+offset_bottom = 467.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 13
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 5
+theme_override_fonts/normal_font = ExtResource("13_ulxet")
+theme_override_fonts/bold_font = ExtResource("8_5pd7y")
+theme_override_font_sizes/normal_font_size = 23
+text = "Once plastics are filtered, they are usually pushed through specialized plastic extrusion machines to turn shredded, purified plastic, into usable parts. Try to get the right temperature for our extruder!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="sort_instruct" unique_id=1987817449]
+offset_left = 310.0
+offset_top = 137.0
+offset_right = 805.0
+offset_bottom = 214.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_5pd7y")
+theme_override_font_sizes/font_size = 60
+text = "Instructions"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Sorting" to="." method="_on_sorting_pressed"]
+[connection signal="pressed" from="Processing" to="." method="_on_processing_pressed"]
+[connection signal="pressed" from="Melting" to="." method="_on_melting_pressed"]
+[connection signal="pressed" from="Coloring" to="." method="_on_coloring_pressed"]

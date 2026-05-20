@@ -1,3 +1,18 @@
 [gd_scene format=3 uid="uid://hbgtr10d667l"]
 
+[ext_resource type="Texture2D" uid="uid://cq7a3p63mlyis" path="res://Sprites/Melting/IMG_1715.png" id="1_nbmm1"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sm56l"]
+radius = 80.0
+height = 160.0
+
 [node name="Extruder" type="RigidBody2D" unique_id=784976862]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=467805494]
+position = Vector2(532, 336.00003)
+scale = Vector2(0.38328528, 0.40287772)
+texture = ExtResource("1_nbmm1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2008330990]
+position = Vector2(136, 104)
+shape = SubResource("CapsuleShape2D_sm56l")

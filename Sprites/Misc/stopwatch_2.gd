@@ -18,8 +18,8 @@ func _process(delta):
 	label.text = "%02d:%02d" % time_left_still()
 
 
-func _on_timer_timeout() -> void:
-	if ($/root/Sorting.count == 12):
-		$/root/GameManage.total_score += 1
-	$/root/Sorting.show_end = true
+# func _on_timer_timeout() -> void:
+	# if ($/root/Sorting.count == 12):
+	# 	$/root/GameManage.total_score += 1
+	# $/root/Sorting.show_end = true
 	

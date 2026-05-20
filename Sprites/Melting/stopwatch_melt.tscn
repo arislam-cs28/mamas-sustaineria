@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://c3pi3vx5m4yc7"]
+
+[ext_resource type="Script" uid="uid://cms63tboy5ir8" path="res://Sprites/Misc/stopwatch_2.gd" id="1_3t8mf"]
+[ext_resource type="Texture2D" uid="uid://8b16je7gwnew" path="res://Sprites/Misc/digi_clock.png" id="2_d4l77"]
+[ext_resource type="FontFile" uid="uid://n5py003eqye6" path="res://Fonts/SpaceMono-Regular.ttf" id="3_d1icr"]
+[ext_resource type="FontFile" uid="uid://cy1jcm8tofucl" path="res://Fonts/Silkscreen-Regular.ttf" id="4_qqtck"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_63qfv"]
+size = Vector2(312, 128)
+
+[node name="Stopwatch2" type="RigidBody2D" unique_id=1619344646]
+freeze = true
+script = ExtResource("1_3t8mf")
+
+[node name="DigiClock" type="Sprite2D" parent="." unique_id=1148952662]
+position = Vector2(1.4588013, -2.3749847)
+scale = Vector2(0.15993622, 0.1309777)
+texture = ExtResource("2_d4l77")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=483841832]
+position = Vector2(4, 0)
+shape = SubResource("RectangleShape2D_63qfv")
+
+[node name="Label" type="Label" parent="." unique_id=371206570]
+offset_left = -70.5412
+offset_top = 35.625015
+offset_right = -30.541199
+offset_bottom = 58.625
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_d1icr")
+theme_override_font_sizes/font_size = 9
+text = "Start"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="." unique_id=366972025]
+offset_left = 45.4588
+offset_top = 35.625015
+offset_right = 85.4588
+offset_bottom = 58.625
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_d1icr")
+theme_override_font_sizes/font_size = 9
+text = "Stop"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="." unique_id=428282624]
+offset_left = -118.5412
+offset_top = -42.374985
+offset_right = 121.4588
+offset_bottom = 22.625015
+theme_override_fonts/font = ExtResource("4_qqtck")
+theme_override_font_sizes/font_size = 50
+text = "00:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Timer" type="Timer" parent="." unique_id=653276613]
+wait_time = 16.0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

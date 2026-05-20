@@ -241,3 +241,5 @@ text = "Coloring"
 
 [connection signal="pressed" from="Sorting" to="." method="_on_sorting_pressed"]
 [connection signal="pressed" from="Processing" to="." method="_on_processing_pressed"]
+[connection signal="pressed" from="Melting" to="." method="_on_melting_pressed"]
+[connection signal="pressed" from="Coloring" to="." method="_on_coloring_pressed"]
