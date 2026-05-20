@@ -19,4 +19,7 @@ func _process(delta):
 
 
 func _on_timer_timeout() -> void:
-	pass # Replace with function body.
+	if ($/root/Sorting.count == 12):
+		$/root/GameManage.total_score += 1
+	$/root/Sorting.show_end = true
+	

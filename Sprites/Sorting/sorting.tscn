@@ -13,13 +13,27 @@
 [ext_resource type="PackedScene" uid="uid://6s0ediiumuxe" path="res://Sprites/Plastics/plastic_to_sort.tscn" id="11_4u31e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ione4"]
-size = Vector2(576.0001, 288.00003)
+size = Vector2(559.0593, 203.29413)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_268yn"]
-size = Vector2(597.35046, 295.76544)
+size = Vector2(551.4006, 230.0398)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nxh0s"]
-size = Vector2(580.2532, 297.99457)
+size = Vector2(500.0797, 192.82)
+
+[sub_resource type="GDScript" id="GDScript_4u31e"]
+script/source = "extends CollisionShape2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l4ita"]
 size = Vector2(648, 440)
@@ -42,7 +56,7 @@ scale = Vector2(0.4722222, 0.47222224)
 texture = ExtResource("2_vnq5x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="White" unique_id=946639975]
-position = Vector2(528, 108)
+position = Vector2(532, 88)
 scale = Vector2(0.47222194, 0.47222224)
 shape = SubResource("RectangleShape2D_ione4")
 
@@ -55,7 +69,7 @@ scale = Vector2(0.5223064, 0.4868723)
 texture = ExtResource("3_ione4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Contaminated" unique_id=876588184]
-position = Vector2(867.99994, 104.000015)
+position = Vector2(864, 88)
 scale = Vector2(0.52230626, 0.4868723)
 shape = SubResource("RectangleShape2D_268yn")
 
@@ -68,9 +82,10 @@ scale = Vector2(0.4639262, 0.4563841)
 texture = ExtResource("4_268yn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Colored" unique_id=738549837]
-position = Vector2(217.4027, 108)
+position = Vector2(228, 92)
 scale = Vector2(0.46392608, 0.4563841)
 shape = SubResource("RectangleShape2D_nxh0s")
+script = SubResource("GDScript_4u31e")
 
 [node name="Stopwatch2" parent="." unique_id=1619344646 instance=ExtResource("5_ione4")]
 position = Vector2(185, 440.00003)
@@ -113,6 +128,7 @@ position = Vector2(704, 480)
 position = Vector2(816, 544)
 
 [node name="sort_instruct" type="RigidBody2D" parent="." unique_id=1141570330]
+visible = false
 freeze = true
 
 [node name="ColorRect" type="ColorRect" parent="sort_instruct" unique_id=1703617687]
@@ -157,3 +173,17 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("9_akrjc")
 theme_override_font_sizes/font_size = 60
 text = "Instructions"
+
+[node name="Panel" type="Panel" parent="." unique_id=1430344761]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Panel" unique_id=1589006834]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 496.0
+offset_right = 424.0
+offset_bottom = 576.0
+theme_override_fonts/font = ExtResource("9_wgmlu")
+theme_override_font_sizes/font_size = 35
+text = "Sorting complete!"

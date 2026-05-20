@@ -12,6 +12,7 @@ func _ready() -> void:
 	file_path = texture.resource_path.get_file().get_basename()
 	plastic_name = file_path
 	print(plastic_name) 
+	$Label.visible = false
 
 func _physics_process(delta: float) -> void:
 	if drags:
@@ -30,3 +31,39 @@ func _input(event):
 				print("it no work augh")
 		elif !event.pressed:
 			drags = false
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	print(body.name)
+	
+	if (plastic_name == "teal" or plastic_name == "red"):
+		if (body.name == "Colored"):
+			$/root/Sorting.count += 1
+			$Label.visible = true
+			$Label.text = "Awesome!"
+			await get_tree().create_timer(1.0).timeout
+			hide()
+			$Label.visible = false
+		else:
+			$Label.text = "Wrong bin..."
+	elif (plastic_name == "dirty_teal" or plastic_name == "dirty_red" or plastic_name == "dirty_white"):
+		if (body.name == "Contaminated"):
+			$/root/Sorting.count += 1
+			$Label.visible = true
+			$Label.text = "Awesome!"
+			await get_tree().create_timer(1.0).timeout
+			hide()
+			$Label.visible = false
+		else:
+			$Label.text = "Wrong bin..."
+	elif (plastic_name == "white"):
+		if (body.name == "White"):
+			$/root/Sorting.count += 1
+			$Label.visible = true
+			$Label.text = "Awesome!"
+			await get_tree().create_timer(1.0).timeout
+			hide()
+			$Label.visible = false
+		else:
+			$Label.text = "Wrong bin..."
+		
