@@ -33,7 +33,7 @@ func _ready() -> void:
 				instance.speed = 200.0 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body.is_in_group("current_customer"):
+	if "moves" in body:
 		if GameManage.customer_is_waiting:
 			return
 			

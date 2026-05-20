@@ -14,7 +14,10 @@ func _ready() -> void:
 		$star3.visible = false
 	else:
 		$RichTextLabel.text = "You are a stellar recycler! Now that you understand plastics, you should try your hand at recycling competitions with your friends, like seeing who can make the best filtration systems or more!"
-
+	await get_tree().create_timer(8.0).timeout
+	TransitionScreen.transition()
+	await TransitionScreen.on_transition_finished
+	get_tree().change_scene_to_file("res://Scenes/Ordering/ordering.tscn")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

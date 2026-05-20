@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dxiltmiekvphh" path="res://Characters/charThreeSpeaking.tscn" id="3_nbjjc"]
 [ext_resource type="Texture2D" uid="uid://bdryt0l503t5p" path="res://Sprites/Misc/IMG_1600.png" id="4_66o2b"]
 [ext_resource type="FontFile" uid="uid://n5py003eqye6" path="res://Fonts/SpaceMono-Regular.ttf" id="5_03law"]
+[ext_resource type="Texture2D" uid="uid://bail56hg1w8gh" path="res://Scenes/Ordering/economy.png" id="6_nuuqd"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wx62s"]
 texture = ExtResource("2_nuuqd")
@@ -38,3 +39,8 @@ theme_override_font_sizes/font_size = 23
 horizontal_alignment = 1
 vertical_alignment = 1
 clip_text = true
+
+[node name="Economy" type="Sprite2D" parent="." unique_id=579862240]
+position = Vector2(858, 135)
+scale = Vector2(0.07598925, 0.07598925)
+texture = ExtResource("6_nuuqd")
