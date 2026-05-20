@@ -21,3 +21,10 @@ func _process(delta: float) -> void:
 	print($"/root/GameManage".total_score)
 	if show_end:
 		$Panel.visible = true
+
+
+func _on_sorting_pressed() -> void:
+	get_tree().change_scene_to_file("res://Sprites/Sorting/sorting.tscn")
+	
+func _on_processing_pressed() -> void:
+	get_tree().change_scene_to_file("res://Sprites/Processing/washing.tscn")

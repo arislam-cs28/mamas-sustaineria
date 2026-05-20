@@ -2,9 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://8p62lr10qemy" path="res://Sprites/Processing/IMG_1316.png" id="1_ismch"]
 [ext_resource type="Script" uid="uid://duyu8ti4ucwwt" path="res://Sprites/Processing/washing.gd" id="1_ordxu"]
-[ext_resource type="Script" uid="uid://odeyqn5p81ga" path="res://Sprites/Processing/dirty_path.gd" id="3_ordxu"]
+[ext_resource type="Script" path="res://Sprites/Processing/dirty_path.gd" id="3_ordxu"]
 [ext_resource type="Script" uid="uid://bs6qw1xsgq8yv" path="res://Sprites/Processing/path_2d_2.gd" id="4_ordxu"]
-[ext_resource type="Script" uid="uid://b0wp7utl1tqju" path="res://Sprites/Processing/control.gd" id="5_2ppw1"]
+[ext_resource type="Script" path="res://Sprites/Processing/control.gd" id="5_2ppw1"]
 [ext_resource type="FontFile" uid="uid://cy1jcm8tofucl" path="res://Fonts/Silkscreen-Regular.ttf" id="6_2ppw1"]
 [ext_resource type="Texture2D" uid="uid://bxfb3slv5cxfo" path="res://Sprites/Processing/Screenshot_2026-05-19_at_4.39.43_PM-removebg-preview.png" id="6_imdih"]
 [ext_resource type="Texture2D" uid="uid://cx4577v5u6x54" path="res://Sprites/Processing/Screenshot 2026-05-19 at 4.22.21 PM.png" id="6_ny0st"]
@@ -176,9 +176,9 @@ expand_mode = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="processing instruct" unique_id=2012446661]
 offset_left = 312.0
-offset_top = 232.0
+offset_top = 219.0
 offset_right = 792.0
-offset_bottom = 459.0
+offset_bottom = 472.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_outline_size = 13
 theme_override_constants/shadow_offset_x = 6
@@ -186,15 +186,15 @@ theme_override_constants/shadow_offset_y = 5
 theme_override_fonts/normal_font = ExtResource("11_dhbqg")
 theme_override_fonts/bold_font = ExtResource("12_buuan")
 theme_override_font_sizes/normal_font_size = 23
-text = "Plastics are next washed and shredded. Click \"Start Washer\" when in the green to wash all the plastic. Then, click quickly to shred as much plastic as possible!"
+text = "Plastics are next washed and shredded with modern industrial filtration systems. Click \"Start Washer\" when in the green to wash all the plastic. Then, click quickly to shred as much as possible!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label" type="Label" parent="processing instruct" unique_id=1679255973]
 offset_left = 310.0
-offset_top = 152.0
+offset_top = 143.0
 offset_right = 805.0
-offset_bottom = 229.0
+offset_bottom = 220.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_2ppw1")
 theme_override_font_sizes/font_size = 60

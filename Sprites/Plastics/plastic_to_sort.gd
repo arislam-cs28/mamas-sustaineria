@@ -40,12 +40,12 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		if (body.name == "Colored"):
 			$/root/Sorting.count += 1
 			$Label.visible = true
-			$Label.text = "Awesome!"
+			$Label.text = "Great job!"
 			await get_tree().create_timer(1.0).timeout
 			hide()
 			$Label.visible = false
 		else:
-			$Label.text = "Wrong bin..."
+			$Label.text = "Oops, put it back in..."
 	elif (plastic_name == "dirty_teal" or plastic_name == "dirty_red" or plastic_name == "dirty_white"):
 		if (body.name == "Contaminated"):
 			$/root/Sorting.count += 1
@@ -55,15 +55,15 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 			hide()
 			$Label.visible = false
 		else:
-			$Label.text = "Wrong bin..."
+			$Label.text = "Wait! Put it back!"
 	elif (plastic_name == "white"):
 		if (body.name == "White"):
 			$/root/Sorting.count += 1
 			$Label.visible = true
-			$Label.text = "Awesome!"
+			$Label.text = "Yay! So nice!"
 			await get_tree().create_timer(1.0).timeout
 			hide()
 			$Label.visible = false
 		else:
-			$Label.text = "Wrong bin..."
+			$Label.text = "Wait! Put it back!"
 		
