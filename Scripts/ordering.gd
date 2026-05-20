@@ -47,23 +47,37 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		
 		await get_tree().create_timer(1.0).timeout
 		if GameManage.current_index == 0:
+			TransitionScreen.transition()
+			await TransitionScreen.on_transition_finished
 			get_tree().change_scene_to_file("res://Scenes/Ordering/orderingScreen.tscn")
 		elif GameManage.current_index == 1:
+			TransitionScreen.transition()
+			await TransitionScreen.on_transition_finished
 			get_tree().change_scene_to_file("res://Scenes/Ordering/orderscreenforchar2.tscn")
 		elif GameManage.current_index == 2:
+			TransitionScreen.transition()
+			await TransitionScreen.on_transition_finished
 			get_tree().change_scene_to_file("res://Scenes/Ordering/orderchar3.tscn")
 
 
 func _on_sorting_pressed() -> void:
+	TransitionScreen.transition()
+	await TransitionScreen.on_transition_finished
 	get_tree().change_scene_to_file("res://Sprites/Sorting/sorting.tscn")
 
 func _on_processing_pressed() -> void:
+	TransitionScreen.transition()
+	await TransitionScreen.on_transition_finished
 	get_tree().change_scene_to_file("res://Sprites/Processing/washing.tscn")
 	
 func _on_melting_pressed() -> void:
+	TransitionScreen.transition()
+	await TransitionScreen.on_transition_finished
 	get_tree().change_scene_to_file("res://Sprites/Melting/melting.tscn")
 
 func _on_coloring_pressed() -> void:
+	TransitionScreen.transition()
+	await TransitionScreen.on_transition_finished
 	get_tree().change_scene_to_file("res://Scenes/coloring/coloring.tscn")
 	
 # buttons to respective scenes

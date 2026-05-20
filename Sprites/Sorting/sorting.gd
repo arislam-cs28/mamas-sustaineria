@@ -24,14 +24,22 @@ func _process(delta: float) -> void:
 
 
 func _on_sorting_pressed() -> void:
+	TransitionScreen.transition()
+	await TransitionScreen.on_transition_finished
 	get_tree().change_scene_to_file("res://Sprites/Sorting/sorting.tscn")
 	
 func _on_processing_pressed() -> void:
+	TransitionScreen.transition()
+	await TransitionScreen.on_transition_finished
 	get_tree().change_scene_to_file("res://Sprites/Processing/washing.tscn")
 
 
 func _on_melting_pressed() -> void:
+	TransitionScreen.transition()
+	await TransitionScreen.on_transition_finished
 	get_tree().change_scene_to_file("res://Sprites/Melting/melting.tscn")
 
 func _on_coloring_pressed() -> void:
+	TransitionScreen.transition()
+	await TransitionScreen.on_transition_finished
 	get_tree().change_scene_to_file("res://Scenes/coloring/coloring.tscn")	

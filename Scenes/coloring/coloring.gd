@@ -79,19 +79,29 @@ func submit_guess(player_choice: String):
 		$"finish order button".visible = true
 
 func _on_sorting_pressed() -> void:
+	TransitionScreen.transition()
+	await TransitionScreen.on_transition_finished
 	get_tree().change_scene_to_file("res://Sprites/Sorting/sorting.tscn")
 
 func _on_processing_pressed() -> void:
+	TransitionScreen.transition()
+	await TransitionScreen.on_transition_finished
 	get_tree().change_scene_to_file("res://Sprites/Processing/washing.tscn")
 
 func _on_melting_pressed() -> void:
+	TransitionScreen.transition()
+	await TransitionScreen.on_transition_finished
 	get_tree().change_scene_to_file("res://Sprites/Melting/melting.tscn")
 
 func _on_coloring_pressed() -> void:
+	TransitionScreen.transition()
+	await TransitionScreen.on_transition_finished
 	get_tree().change_scene_to_file("res://Scenes/coloring/coloring.tscn")
 	
 func _on_finish_order_button_pressed() -> void:
 	GameManage.customer_is_waiting = false
 	GameManage.current_index = (GameManage.current_index + 1) % 3
 	GameManage.current_order_text = ""
+	TransitionScreen.transition()
+	await TransitionScreen.on_transition_finished
 	get_tree().change_scene_to_file("res://Scenes/Ordering/ordering.tscn")

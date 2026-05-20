@@ -14,6 +14,8 @@ func _ready() -> void:
 		.set_ease(Tween.EASE_IN_OUT)
 	await tween.finished
 	await get_tree().create_timer(1.0).timeout
+	TransitionScreen.transition()
+	await TransitionScreen.on_transition_finished
 	get_tree().change_scene_to_file("res://Scenes/Ordering/ordering.tscn")
 
 	

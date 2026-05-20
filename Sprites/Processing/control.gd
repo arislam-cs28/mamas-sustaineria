@@ -45,4 +45,6 @@ func _on_start_washing_buttone_pressed() -> void:
 	$"../Path2D2".set_process(true)
 	$"../Path2D2/Timer".start()
 	await get_tree().create_timer(5.0).timeout
+	TransitionScreen.transition()
+	await TransitionScreen.on_transition_finished
 	get_tree().change_scene_to_file("res://Sprites/Processing/shredding.tscn")
