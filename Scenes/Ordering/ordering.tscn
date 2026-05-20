@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://d1p77k0xebhd3" path="res://Sprites/Misc/IMG_1265.png" id="4_jx071"]
 [ext_resource type="Texture2D" uid="uid://ce4lrtgp5m673" path="res://Sprites/Misc/IMG_1274.png" id="4_unulo"]
 [ext_resource type="FontFile" uid="uid://cy1jcm8tofucl" path="res://Fonts/Silkscreen-Regular.ttf" id="6_128v6"]
+[ext_resource type="PackedScene" uid="uid://ca6xapqnexgye" path="res://Characters/Headshots/player.tscn" id="7_xkalu"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k5t1g"]
 texture = ExtResource("1_cgp7d")
@@ -24,6 +25,9 @@ script = ExtResource("1_unulo")
 offset_right = 1152.0
 offset_bottom = 648.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_k5t1g")
+
+[node name="Player" parent="." unique_id=74943810 instance=ExtResource("7_xkalu")]
+position = Vector2(148, 198)
 
 [node name="Countertop" type="Sprite2D" parent="." unique_id=240777149]
 position = Vector2(559.99994, 324.00003)
