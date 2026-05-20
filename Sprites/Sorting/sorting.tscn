@@ -10,6 +10,7 @@
 [ext_resource type="FontFile" uid="uid://n5py003eqye6" path="res://Fonts/SpaceMono-Regular.ttf" id="8_4u31e"]
 [ext_resource type="FontFile" uid="uid://cy1jcm8tofucl" path="res://Fonts/Silkscreen-Regular.ttf" id="9_akrjc"]
 [ext_resource type="FontFile" uid="uid://bvfd1ybmcxsa6" path="res://Fonts/SpaceMono-Bold.ttf" id="9_wgmlu"]
+[ext_resource type="PackedScene" uid="uid://6s0ediiumuxe" path="res://Sprites/Plastics/plastic_to_sort.tscn" id="11_4u31e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ione4"]
 size = Vector2(576.0001, 288.00003)
@@ -30,6 +31,7 @@ script = ExtResource("1_l4ita")
 position = Vector2(576, 324)
 scale = Vector2(0.47603303, 0.38848916)
 texture = ExtResource("1_0rsmd")
+metadata/_edit_lock_ = true
 
 [node name="White" type="RigidBody2D" parent="." unique_id=210738629]
 freeze = true
@@ -74,8 +76,55 @@ shape = SubResource("RectangleShape2D_nxh0s")
 position = Vector2(185, 440.00003)
 scale = Vector2(0.75, 0.75)
 
+[node name="PlasticToSort" parent="." unique_id=1084144945 instance=ExtResource("11_4u31e")]
+position = Vector2(664, 536)
+scale = Vector2(0.05, 0.05)
+
+[node name="PlasticToSort2" parent="." unique_id=92007019 instance=ExtResource("11_4u31e")]
+position = Vector2(552, 512)
+scale = Vector2(0.05, 0.05)
+
+[node name="PlasticToSort3" parent="." unique_id=639580436 instance=ExtResource("11_4u31e")]
+position = Vector2(640, 448)
+scale = Vector2(0.05, 0.05)
+
+[node name="PlasticToSort4" parent="." unique_id=1741614400 instance=ExtResource("11_4u31e")]
+position = Vector2(760, 504)
+scale = Vector2(0.05, 0.05)
+
+[node name="PlasticToSort5" parent="." unique_id=175047810 instance=ExtResource("11_4u31e")]
+position = Vector2(800, 520)
+scale = Vector2(0.05, 0.05)
+
+[node name="PlasticToSort6" parent="." unique_id=20137452 instance=ExtResource("11_4u31e")]
+position = Vector2(752, 544)
+scale = Vector2(0.05, 0.05)
+
+[node name="PlasticToSort7" parent="." unique_id=1858292455 instance=ExtResource("11_4u31e")]
+position = Vector2(576, 544)
+scale = Vector2(0.05, 0.05)
+
+[node name="PlasticToSort8" parent="." unique_id=1927308606 instance=ExtResource("11_4u31e")]
+position = Vector2(616, 488)
+scale = Vector2(0.05, 0.05)
+
+[node name="PlasticToSort9" parent="." unique_id=1508193637 instance=ExtResource("11_4u31e")]
+position = Vector2(496, 536)
+scale = Vector2(0.05, 0.05)
+
+[node name="PlasticToSort10" parent="." unique_id=1769532782 instance=ExtResource("11_4u31e")]
+position = Vector2(640, 552)
+scale = Vector2(0.05, 0.05)
+
+[node name="PlasticToSort11" parent="." unique_id=1098201822 instance=ExtResource("11_4u31e")]
+position = Vector2(704, 480)
+scale = Vector2(0.05, 0.05)
+
+[node name="PlasticToSort12" parent="." unique_id=1151683400 instance=ExtResource("11_4u31e")]
+position = Vector2(816, 544)
+scale = Vector2(0.05, 0.05)
+
 [node name="sort_instruct" type="RigidBody2D" parent="." unique_id=1141570330]
-visible = false
 freeze = true
 
 [node name="ColorRect" type="ColorRect" parent="sort_instruct" unique_id=1703617687]
