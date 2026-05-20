@@ -5,9 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://b855oloyl1v3e" path="res://Characters/charOneSpeaking.tscn" id="3_xxfxb"]
 [ext_resource type="Texture2D" uid="uid://bdryt0l503t5p" path="res://Sprites/Misc/IMG_1600.png" id="4_xxfxb"]
 [ext_resource type="FontFile" uid="uid://n5py003eqye6" path="res://Fonts/SpaceMono-Regular.ttf" id="5_ojgwq"]
-[ext_resource type="Texture2D" uid="uid://d1p77k0xebhd3" path="res://Sprites/Misc/IMG_1265.png" id="6_y5rgg"]
 [ext_resource type="Texture2D" uid="uid://bb2wfgk17hhi8" path="res://Sprites/Misc/IMG_1268.png" id="7_tbrv4"]
 [ext_resource type="Texture2D" uid="uid://cmy4ytsdig5xm" path="res://Sprites/Misc/IMG_1317.png" id="8_jwyrh"]
+[ext_resource type="Texture2D" uid="uid://bail56hg1w8gh" path="res://Scenes/Ordering/economy.png" id="8_y5rgg"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wx62s"]
 texture = ExtResource("1_ocga6")
@@ -42,11 +42,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 clip_text = true
 
-[node name="Img1265" type="Sprite2D" parent="." unique_id=276172170]
-position = Vector2(580.00006, 125.5625)
-scale = Vector2(0.4666942, 0.3880745)
-texture = ExtResource("6_y5rgg")
-
 [node name="Img1268" type="Sprite2D" parent="." unique_id=1339805169]
 position = Vector2(576, 76)
 scale = Vector2(0.4766239, 0.3887468)
@@ -56,3 +51,8 @@ texture = ExtResource("7_tbrv4")
 position = Vector2(920, 323.99997)
 scale = Vector2(0.47540987, 0.3884892)
 texture = ExtResource("8_jwyrh")
+
+[node name="Economy" type="Sprite2D" parent="." unique_id=785492434]
+position = Vector2(858, 135)
+scale = Vector2(0.07598925, 0.07598925)
+texture = ExtResource("8_y5rgg")

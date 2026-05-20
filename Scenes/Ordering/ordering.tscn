@@ -41,7 +41,7 @@ texture = ExtResource("2_k5t1g")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Top" unique_id=1302778373]
 position = Vector2(2.699997, 0)
 scale = Vector2(1.01875, 1)
-polygon = PackedVector2Array(-8, 376, 344, 184, 376, 504, 152, 656, -24, 664)
+polygon = PackedVector2Array(-8, 376, 391.95096, 167, 529.37427, 371, 152, 656, -24, 664)
 
 [node name="Window" type="Sprite2D" parent="." unique_id=1145054817]
 position = Vector2(1280, 160)
@@ -52,6 +52,11 @@ texture = ExtResource("4_jx071")
 position = Vector2(1058, 233.07712)
 scale = Vector2(0.35697925, 0.35581827)
 texture = ExtResource("4_unulo")
+
+[node name="Competeandfundraise" type="Sprite2D" parent="." unique_id=1261060040]
+position = Vector2(281, 505)
+scale = Vector2(0.19826809, 0.19826806)
+texture = ExtResource("8_u0eow")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=1832675827]
 visible = false
@@ -101,11 +106,6 @@ offset_bottom = 642.0
 theme_override_fonts/font = ExtResource("6_128v6")
 theme_override_font_sizes/font_size = 30
 text = "Coloring"
-
-[node name="Competeandfundraise" type="Sprite2D" parent="." unique_id=1261060040]
-position = Vector2(281, 505)
-scale = Vector2(0.19826809, 0.19826806)
-texture = ExtResource("8_u0eow")
 
 [node name="GoGreenPoster" type="Sprite2D" parent="." unique_id=1895328445]
 position = Vector2(506.00006, 94.00001)

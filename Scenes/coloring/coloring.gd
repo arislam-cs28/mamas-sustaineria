@@ -104,4 +104,4 @@ func _on_finish_order_button_pressed() -> void:
 	GameManage.current_order_text = ""
 	TransitionScreen.transition()
 	await TransitionScreen.on_transition_finished
-	get_tree().change_scene_to_file("res://Scenes/Ordering/ordering.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Ending/scoring.tscn")
