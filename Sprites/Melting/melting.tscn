@@ -1,3 +1,11 @@
-[gd_scene format=3 uid="uid://cjt013cdwe0kp"]
+[gd_scene format=3 uid="uid://dpkeuom4wrtqt"]
+
+[ext_resource type="Texture2D" uid="uid://dduo05ge5ux77" path="res://Sprites/Melting/IMG_1327.png" id="1_21h87"]
 
 [node name="Melting" type="Node2D" unique_id=938524040]
+
+[node name="MeltBG" type="Sprite2D" parent="." unique_id=1574472013]
+position = Vector2(576.00006, 324)
+scale = Vector2(0.47603303, 0.38848922)
+texture = ExtResource("1_21h87")
+metadata/_edit_lock_ = true
