@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://ce4lrtgp5m673" path="res://Sprites/Misc/IMG_1274.png" id="4_unulo"]
 [ext_resource type="FontFile" uid="uid://cy1jcm8tofucl" path="res://Fonts/Silkscreen-Regular.ttf" id="6_128v6"]
 [ext_resource type="PackedScene" uid="uid://ca6xapqnexgye" path="res://Characters/Headshots/player.tscn" id="7_xkalu"]
+[ext_resource type="Texture2D" uid="uid://df4bxw484grc7" path="res://Sprites/Backgrounds/competeandfundraise.png" id="8_u0eow"]
+[ext_resource type="Texture2D" uid="uid://xfimb21hjwmq" path="res://Scenes/Ordering/go green poster.png" id="9_d24lc"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k5t1g"]
 texture = ExtResource("1_cgp7d")
@@ -99,6 +101,16 @@ offset_bottom = 642.0
 theme_override_fonts/font = ExtResource("6_128v6")
 theme_override_font_sizes/font_size = 30
 text = "Coloring"
+
+[node name="Competeandfundraise" type="Sprite2D" parent="." unique_id=1261060040]
+position = Vector2(281, 505)
+scale = Vector2(0.19826809, 0.19826806)
+texture = ExtResource("8_u0eow")
+
+[node name="GoGreenPoster" type="Sprite2D" parent="." unique_id=1895328445]
+position = Vector2(506.00006, 94.00001)
+scale = Vector2(0.067319274, 0.06354571)
+texture = ExtResource("9_d24lc")
 
 [connection signal="body_entered" from="Top" to="." method="_on_area_2d_body_entered"]
 [connection signal="pressed" from="Sorting" to="." method="_on_sorting_pressed"]
