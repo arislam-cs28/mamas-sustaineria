@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://c0eyp1xxhg22g"]
+
+[ext_resource type="Texture2D" uid="uid://cgi7ubwjgaysg" path="res://Sprites/Plastics/white pellets.png" id="1_dvwlm"]
+
+[node name="WhitePelletsConveyor" type="Node2D" unique_id=185648885]
+
+[node name="WhitePellets" type="Sprite2D" parent="." unique_id=594157774]
+position = Vector2(591, 305)
+scale = Vector2(0.2939516, 0.2939516)
+texture = ExtResource("1_dvwlm")

@@ -25,6 +25,7 @@ buses/default_bus_layout=""
 Musiccontroller="*uid://ctpmch52kxqpi"
 TransitionScreen="*uid://cmkc4hgx7usim"
 GameManage="*uid://bvymbd1ek88kk"
+MusicControl="*uid://ck7kpr42pnf7o"
 Globals="*uid://dyydpo43ot63i"
 
 [display]

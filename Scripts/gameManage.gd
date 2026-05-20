@@ -4,6 +4,7 @@ var current_index = 0
 var current_order_text = ""
 var customer_is_waiting = false
 var total_score = 0
+var saved_color = ""
 
 var show_sort_end = false
 var what_player = 0
