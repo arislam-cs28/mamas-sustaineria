@@ -16,3 +16,7 @@ func time_left_still():
 	
 func _process(delta):
 	label.text = "%02d:%02d" % time_left_still()
+
+
+func _on_timer_timeout() -> void:
+	pass # Replace with function body.
