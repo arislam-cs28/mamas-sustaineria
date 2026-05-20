@@ -134,7 +134,25 @@ position = Vector2(704, 480)
 [node name="PlasticToSort12" parent="." unique_id=1151683400 instance=ExtResource("11_4u31e")]
 position = Vector2(872, 528)
 
+[node name="Panel" type="Panel" parent="." unique_id=1430344761]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel" unique_id=2024630645]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 3.0000002
+offset_left = 32.0
+offset_top = 496.0
+offset_right = 392.0
+offset_bottom = 464.0
+theme_override_fonts/normal_font = ExtResource("8_4u31e")
+theme_override_font_sizes/normal_font_size = 18
+text = "Fun fact: Did you know that machine learning can make sorting more efficient?"
+
 [node name="sort_instruct" type="RigidBody2D" parent="." unique_id=1141570330]
+visible = false
 freeze = true
 
 [node name="ColorRect" type="ColorRect" parent="sort_instruct" unique_id=1703617687]
@@ -179,21 +197,6 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("9_akrjc")
 theme_override_font_sizes/font_size = 60
 text = "Instructions"
-
-[node name="Panel" type="Panel" parent="." unique_id=1430344761]
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Label" type="Label" parent="Panel" unique_id=1589006834]
-layout_mode = 0
-offset_left = 40.0
-offset_top = 496.0
-offset_right = 424.0
-offset_bottom = 576.0
-theme_override_fonts/font = ExtResource("9_wgmlu")
-theme_override_font_sizes/font_size = 24
-text = "Sorting complete!
-Time to process next!"
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=1000181325]
 offset_left = 105.0
