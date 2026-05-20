@@ -5,6 +5,10 @@ var current_order_text = ""
 var customer_is_waiting = false
 var total_score = 0
 
+var show_sort_end = false
+var what_player = 0
+var go_next_char = false
+
 # Add all your character files here!
 var customers = [
 	preload("res://Characters/one_char.tscn"),
@@ -14,6 +18,7 @@ var customers = [
 
 func get_next_customer():
 	if current_index < customers.size():
+		what_player = current_index
 		return customers[current_index]
 	return null
 
