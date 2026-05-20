@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bgbtl5x6knd2m"]
 
 [ext_resource type="Script" uid="uid://c7vhqy7m6j5h0" path="res://Scripts/main_menu.gd" id="1_forwa"]
-[ext_resource type="Texture2D" uid="uid://dfhqt3t3wq1ad" path="res://Sprites/Backgrounds/IMG_1289.png" id="2_ndra0"]
+[ext_resource type="Texture2D" uid="uid://dgdrpwi07bet0" path="res://Scenes/Main/title screen.png" id="2_ndra0"]
 [ext_resource type="FontFile" uid="uid://cy1jcm8tofucl" path="res://Fonts/Silkscreen-Regular.ttf" id="3_rgnbq"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7gkfm"]
@@ -21,6 +21,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_bottom = 45.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_7gkfm")
