@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://bdsy6y27om81p"]
+
+[ext_resource type="Script" uid="uid://boaxr2cs3p6ds" path="res://Scripts/ordering_screen.gd" id="1_nbjjc"]
+[ext_resource type="Texture2D" uid="uid://bnpqkrei27ixu" path="res://Sprites/Orders/IMG_1262.png" id="2_nuuqd"]
+[ext_resource type="PackedScene" uid="uid://dxiltmiekvphh" path="res://Characters/charThreeSpeaking.tscn" id="3_nbjjc"]
+[ext_resource type="Texture2D" uid="uid://bdryt0l503t5p" path="res://Sprites/Misc/IMG_1600.png" id="4_66o2b"]
+[ext_resource type="FontFile" uid="uid://n5py003eqye6" path="res://Fonts/SpaceMono-Regular.ttf" id="5_03law"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wx62s"]
+texture = ExtResource("2_nuuqd")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ojgwq"]
+texture = ExtResource("4_66o2b")
+
+[node name="OrderingScreen3" type="Node2D" unique_id=1265581424]
+script = ExtResource("1_nbjjc")
+
+[node name="Panel" type="Panel" parent="." unique_id=708781203]
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_wx62s")
+
+[node name="CharThreeSpeaking" parent="." unique_id=2112705626 instance=ExtResource("3_nbjjc")]
+position = Vector2(548, 183)
+
+[node name="OrderPanel" type="PanelContainer" parent="." unique_id=400152329]
+offset_left = 688.0
+offset_top = 240.0
+offset_right = 960.0
+offset_bottom = 418.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_ojgwq")
+
+[node name="OrderText" type="Label" parent="OrderPanel" unique_id=256440829]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_03law")
+theme_override_font_sizes/font_size = 23
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true

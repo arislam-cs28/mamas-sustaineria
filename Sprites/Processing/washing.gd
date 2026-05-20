@@ -6,6 +6,8 @@ func _ready() -> void:
 	if GameManage.current_index == 0:
 		await get_tree().create_timer(7.0).timeout
 		$"processing instruct".visible = false
+	else:
+		$"processing instruct".visible = false
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

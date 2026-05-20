@@ -111,10 +111,10 @@ text = "Yellow"
 
 [node name="result" type="PanelContainer" parent="." unique_id=1730432589]
 visible = false
-offset_left = 339.0
-offset_top = 93.0
-offset_right = 828.0
-offset_bottom = 238.0
+offset_left = 322.0
+offset_top = 92.0
+offset_right = 835.0
+offset_bottom = 252.0
 
 [node name="result label" type="Label" parent="result" unique_id=1728514498]
 layout_mode = 2
@@ -168,16 +168,15 @@ text = "Coloring"
 
 [node name="finish order button" type="Button" parent="." unique_id=1956305747]
 visible = false
-offset_left = 432.0
-offset_top = 102.0
-offset_right = 689.0
-offset_bottom = 236.0
+offset_left = 452.0
+offset_top = 100.0
+offset_right = 709.0
+offset_bottom = 234.0
 theme_override_fonts/font = ExtResource("6_efb5p")
 theme_override_font_sizes/font_size = 30
 text = "Finish Order"
 
 [node name="processing instruct" type="RigidBody2D" parent="." unique_id=1201046251]
-visible = false
 freeze = true
 
 [node name="ColorRect" type="ColorRect" parent="processing instruct" unique_id=1715152462]

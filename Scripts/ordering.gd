@@ -31,8 +31,6 @@ func _ready() -> void:
 			instance.moves = true
 			if "speed" in instance:
 				instance.speed = 200.0 
-	else:
-		print("No more customers!")
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("current_customer"):
@@ -48,8 +46,12 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		GameManage.current_order_text = final_order
 		
 		await get_tree().create_timer(1.0).timeout
-		get_tree().change_scene_to_file("res://Scenes/Ordering/orderingScreen.tscn")
-
+		if GameManage.current_index == 0:
+			get_tree().change_scene_to_file("res://Scenes/Ordering/orderingScreen.tscn")
+		elif GameManage.current_index == 1:
+			get_tree().change_scene_to_file("res://Scenes/Ordering/orderscreenforchar2.tscn")
+		elif GameManage.current_index == 2:
+			get_tree().change_scene_to_file("res://Scenes/Ordering/orderchar3.tscn")
 
 
 func _on_sorting_pressed() -> void:
