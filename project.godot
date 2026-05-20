@@ -60,6 +60,17 @@ texture={
 "roughness/src_normal": ""
 }
 
+[input]
+
+click={
+"deadzone": 0.2,
+"events": []
+}
+clicks={
+"deadzone": 0.2,
+"events": []
+}
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

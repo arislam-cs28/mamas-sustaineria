@@ -7,7 +7,33 @@
 [ext_resource type="Texture2D" uid="uid://lrbw36i2ydko" path="res://Sprites/Plastics/dirty_white.png" id="5_lfp2a"]
 [ext_resource type="Texture2D" uid="uid://boomir6ni2pib" path="res://Sprites/Plastics/dirty_red.png" id="6_jr67b"]
 [ext_resource type="Texture2D" uid="uid://co2fgtrqvj5i0" path="res://Sprites/Plastics/dirty_teal.png" id="7_8ek2f"]
+[ext_resource type="Script" uid="uid://1j0xiqgneg07" path="res://Sprites/Plastics/area_2d.gd" id="8_737je"]
+[ext_resource type="FontFile" uid="uid://bvfd1ybmcxsa6" path="res://Fonts/SpaceMono-Bold.ttf" id="9_r2xkd"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6cfwg"]
+radius = 639.99994
+height = 1279.9999
 
 [node name="PlasticToSort" type="Sprite2D" unique_id=1084144945]
+scale = Vector2(0.05, 0.05)
 script = ExtResource("1_6cfwg")
 plastics_available = Array[Texture2D]([ExtResource("2_737je"), ExtResource("3_r2xkd"), ExtResource("4_qssyq"), ExtResource("5_lfp2a"), ExtResource("6_jr67b"), ExtResource("7_8ek2f")])
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1110150026]
+script = ExtResource("8_737je")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=80638228]
+shape = SubResource("CapsuleShape2D_6cfwg")
+
+[node name="Label" type="Label" parent="." unique_id=1876566925]
+offset_left = -799.9995
+offset_top = -639.9995
+offset_right = 799.99976
+offset_bottom = 640.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("9_r2xkd")
+theme_override_font_sizes/font_size = 400
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -13,16 +13,37 @@
 [ext_resource type="PackedScene" uid="uid://6s0ediiumuxe" path="res://Sprites/Plastics/plastic_to_sort.tscn" id="11_4u31e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ione4"]
-size = Vector2(576.0001, 288.00003)
+size = Vector2(559.0593, 203.29413)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_268yn"]
-size = Vector2(597.35046, 295.76544)
+size = Vector2(551.4006, 230.0398)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nxh0s"]
-size = Vector2(580.2532, 297.99457)
+size = Vector2(500.0797, 192.82)
+
+[sub_resource type="GDScript" id="GDScript_4u31e"]
+script/source = "extends CollisionShape2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l4ita"]
 size = Vector2(648, 440)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4u31e"]
+bg_color = Color(0.25808322, 0.5901318, 0.30683917, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
 [node name="Sorting" type="Node2D" unique_id=669842154]
 script = ExtResource("1_l4ita")
@@ -42,7 +63,7 @@ scale = Vector2(0.4722222, 0.47222224)
 texture = ExtResource("2_vnq5x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="White" unique_id=946639975]
-position = Vector2(528, 108)
+position = Vector2(532, 88)
 scale = Vector2(0.47222194, 0.47222224)
 shape = SubResource("RectangleShape2D_ione4")
 
@@ -55,7 +76,7 @@ scale = Vector2(0.5223064, 0.4868723)
 texture = ExtResource("3_ione4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Contaminated" unique_id=876588184]
-position = Vector2(867.99994, 104.000015)
+position = Vector2(864, 88)
 scale = Vector2(0.52230626, 0.4868723)
 shape = SubResource("RectangleShape2D_268yn")
 
@@ -68,9 +89,10 @@ scale = Vector2(0.4639262, 0.4563841)
 texture = ExtResource("4_268yn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Colored" unique_id=738549837]
-position = Vector2(217.4027, 108)
+position = Vector2(228, 92)
 scale = Vector2(0.46392608, 0.4563841)
 shape = SubResource("RectangleShape2D_nxh0s")
+script = SubResource("GDScript_4u31e")
 
 [node name="Stopwatch2" parent="." unique_id=1619344646 instance=ExtResource("5_ione4")]
 position = Vector2(185, 440.00003)
@@ -78,51 +100,39 @@ scale = Vector2(0.75, 0.75)
 
 [node name="PlasticToSort" parent="." unique_id=1084144945 instance=ExtResource("11_4u31e")]
 position = Vector2(664, 536)
-scale = Vector2(0.05, 0.05)
 
 [node name="PlasticToSort2" parent="." unique_id=92007019 instance=ExtResource("11_4u31e")]
 position = Vector2(552, 512)
-scale = Vector2(0.05, 0.05)
 
 [node name="PlasticToSort3" parent="." unique_id=639580436 instance=ExtResource("11_4u31e")]
 position = Vector2(640, 448)
-scale = Vector2(0.05, 0.05)
 
 [node name="PlasticToSort4" parent="." unique_id=1741614400 instance=ExtResource("11_4u31e")]
 position = Vector2(760, 504)
-scale = Vector2(0.05, 0.05)
 
 [node name="PlasticToSort5" parent="." unique_id=175047810 instance=ExtResource("11_4u31e")]
 position = Vector2(800, 520)
-scale = Vector2(0.05, 0.05)
 
 [node name="PlasticToSort6" parent="." unique_id=20137452 instance=ExtResource("11_4u31e")]
 position = Vector2(752, 544)
-scale = Vector2(0.05, 0.05)
 
 [node name="PlasticToSort7" parent="." unique_id=1858292455 instance=ExtResource("11_4u31e")]
 position = Vector2(576, 544)
-scale = Vector2(0.05, 0.05)
 
 [node name="PlasticToSort8" parent="." unique_id=1927308606 instance=ExtResource("11_4u31e")]
 position = Vector2(616, 488)
-scale = Vector2(0.05, 0.05)
 
 [node name="PlasticToSort9" parent="." unique_id=1508193637 instance=ExtResource("11_4u31e")]
-position = Vector2(496, 536)
-scale = Vector2(0.05, 0.05)
+position = Vector2(472, 536)
 
 [node name="PlasticToSort10" parent="." unique_id=1769532782 instance=ExtResource("11_4u31e")]
-position = Vector2(640, 552)
-scale = Vector2(0.05, 0.05)
+position = Vector2(712, 536)
 
 [node name="PlasticToSort11" parent="." unique_id=1098201822 instance=ExtResource("11_4u31e")]
 position = Vector2(704, 480)
-scale = Vector2(0.05, 0.05)
 
 [node name="PlasticToSort12" parent="." unique_id=1151683400 instance=ExtResource("11_4u31e")]
-position = Vector2(816, 544)
-scale = Vector2(0.05, 0.05)
+position = Vector2(872, 528)
 
 [node name="sort_instruct" type="RigidBody2D" parent="." unique_id=1141570330]
 freeze = true
@@ -146,9 +156,9 @@ expand_mode = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="sort_instruct" unique_id=731504300]
 offset_left = 312.0
-offset_top = 232.0
+offset_top = 218.0
 offset_right = 792.0
-offset_bottom = 459.0
+offset_bottom = 467.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_outline_size = 13
 theme_override_constants/shadow_offset_x = 6
@@ -156,16 +166,78 @@ theme_override_constants/shadow_offset_y = 5
 theme_override_fonts/normal_font = ExtResource("8_4u31e")
 theme_override_fonts/bold_font = ExtResource("9_wgmlu")
 theme_override_font_sizes/normal_font_size = 23
-text = "When plastics are first recycled, they need to be sorted to remove contaminants! Sort all of the plastics into the right bins before the timer ends to move onto the next stage!"
+text = "When plastics are first recycled, they need to be sorted to remove contaminants or unwanted dyes! Drag and drop all of the plastics into the right bins before the timer ends to move onto the next stage!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label" type="Label" parent="sort_instruct" unique_id=667973467]
 offset_left = 310.0
-offset_top = 152.0
+offset_top = 137.0
 offset_right = 805.0
-offset_bottom = 229.0
+offset_bottom = 214.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("9_akrjc")
 theme_override_font_sizes/font_size = 60
 text = "Instructions"
+
+[node name="Panel" type="Panel" parent="." unique_id=1430344761]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Panel" unique_id=1589006834]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 496.0
+offset_right = 424.0
+offset_bottom = 576.0
+theme_override_fonts/font = ExtResource("9_wgmlu")
+theme_override_font_sizes/font_size = 24
+text = "Sorting complete!
+Time to process next!"
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1000181325]
+offset_left = 105.0
+offset_top = 584.0
+offset_right = 1067.0
+offset_bottom = 652.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_4u31e")
+metadata/_edit_group_ = true
+
+[node name="Sorting" type="Button" parent="." unique_id=1352942625]
+offset_left = 134.0
+offset_top = 593.0
+offset_right = 288.0
+offset_bottom = 643.0
+theme_override_fonts/font = ExtResource("9_akrjc")
+theme_override_font_sizes/font_size = 30
+text = "Sorting"
+
+[node name="Processing" type="Button" parent="." unique_id=1849770023]
+offset_left = 346.0
+offset_top = 594.0
+offset_right = 568.0
+offset_bottom = 644.0
+theme_override_fonts/font = ExtResource("9_akrjc")
+theme_override_font_sizes/font_size = 30
+text = "Processing"
+
+[node name="Melting" type="Button" parent="." unique_id=865580585]
+offset_left = 637.0
+offset_top = 594.0
+offset_right = 788.0
+offset_bottom = 644.0
+theme_override_fonts/font = ExtResource("9_akrjc")
+theme_override_font_sizes/font_size = 30
+text = "Melting"
+
+[node name="Coloring" type="Button" parent="." unique_id=304861220]
+offset_left = 852.0
+offset_top = 594.0
+offset_right = 1029.0
+offset_bottom = 644.0
+theme_override_fonts/font = ExtResource("9_akrjc")
+theme_override_font_sizes/font_size = 30
+text = "Coloring"
+
+[connection signal="pressed" from="Sorting" to="." method="_on_sorting_pressed"]
+[connection signal="pressed" from="Processing" to="." method="_on_processing_pressed"]
