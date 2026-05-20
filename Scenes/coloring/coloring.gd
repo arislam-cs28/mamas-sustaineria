@@ -23,7 +23,8 @@ func _ready() -> void:
 	if GameManage.current_index == 0:
 		await get_tree().create_timer(7.0).timeout
 		$"processing instruct".visible = false
-		
+	else:
+		$"processing instruct".visible = false
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -89,5 +90,8 @@ func _on_melting_pressed() -> void:
 func _on_coloring_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/coloring/coloring.tscn")
 	
-#func _on_finish_order_button_pressed() -> void:
-	#get_tree().change_scene_to_file()
+func _on_finish_order_button_pressed() -> void:
+	GameManage.customer_is_waiting = false
+	GameManage.current_index = (GameManage.current_index + 1) % 3
+	GameManage.current_order_text = ""
+	get_tree().change_scene_to_file("res://Scenes/Ordering/ordering.tscn")

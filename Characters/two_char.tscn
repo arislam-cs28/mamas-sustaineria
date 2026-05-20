@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bkfj34wg0f412"]
 
 [ext_resource type="Texture2D" uid="uid://c6tk8o3yv1gqx" path="res://Characters/IMG_1624.png" id="1_6y572"]
+[ext_resource type="Script" uid="uid://m5k12gms3qam" path="res://Scripts/one_char.gd" id="1_h4x52"]
 [ext_resource type="Texture2D" uid="uid://bgdfi0m2v4n8l" path="res://Characters/ch2.png" id="2_h4x52"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_52vm4"]
@@ -13,7 +14,7 @@ animations = [{
 "texture": ExtResource("2_h4x52")
 }],
 "loop": true,
-"name": &"default",
+"name": &"walk",
 "speed": 5.0
 }]
 
@@ -23,10 +24,11 @@ height = 3388.235
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1072410067]
 scale = Vector2(0.17, 0.17)
+script = ExtResource("1_h4x52")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=124494575]
 sprite_frames = SubResource("SpriteFrames_52vm4")
-frame_progress = 0.65207684
+animation = &"walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=190315580]
 position = Vector2(-1.1368684e-13, 94.11765)
