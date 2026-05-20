@@ -78,51 +78,39 @@ scale = Vector2(0.75, 0.75)
 
 [node name="PlasticToSort" parent="." unique_id=1084144945 instance=ExtResource("11_4u31e")]
 position = Vector2(664, 536)
-scale = Vector2(0.05, 0.05)
 
 [node name="PlasticToSort2" parent="." unique_id=92007019 instance=ExtResource("11_4u31e")]
 position = Vector2(552, 512)
-scale = Vector2(0.05, 0.05)
 
 [node name="PlasticToSort3" parent="." unique_id=639580436 instance=ExtResource("11_4u31e")]
 position = Vector2(640, 448)
-scale = Vector2(0.05, 0.05)
 
 [node name="PlasticToSort4" parent="." unique_id=1741614400 instance=ExtResource("11_4u31e")]
 position = Vector2(760, 504)
-scale = Vector2(0.05, 0.05)
 
 [node name="PlasticToSort5" parent="." unique_id=175047810 instance=ExtResource("11_4u31e")]
 position = Vector2(800, 520)
-scale = Vector2(0.05, 0.05)
 
 [node name="PlasticToSort6" parent="." unique_id=20137452 instance=ExtResource("11_4u31e")]
 position = Vector2(752, 544)
-scale = Vector2(0.05, 0.05)
 
 [node name="PlasticToSort7" parent="." unique_id=1858292455 instance=ExtResource("11_4u31e")]
 position = Vector2(576, 544)
-scale = Vector2(0.05, 0.05)
 
 [node name="PlasticToSort8" parent="." unique_id=1927308606 instance=ExtResource("11_4u31e")]
 position = Vector2(616, 488)
-scale = Vector2(0.05, 0.05)
 
 [node name="PlasticToSort9" parent="." unique_id=1508193637 instance=ExtResource("11_4u31e")]
 position = Vector2(496, 536)
-scale = Vector2(0.05, 0.05)
 
 [node name="PlasticToSort10" parent="." unique_id=1769532782 instance=ExtResource("11_4u31e")]
 position = Vector2(640, 552)
-scale = Vector2(0.05, 0.05)
 
 [node name="PlasticToSort11" parent="." unique_id=1098201822 instance=ExtResource("11_4u31e")]
 position = Vector2(704, 480)
-scale = Vector2(0.05, 0.05)
 
 [node name="PlasticToSort12" parent="." unique_id=1151683400 instance=ExtResource("11_4u31e")]
 position = Vector2(816, 544)
-scale = Vector2(0.05, 0.05)
 
 [node name="sort_instruct" type="RigidBody2D" parent="." unique_id=1141570330]
 freeze = true
@@ -146,9 +134,9 @@ expand_mode = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="sort_instruct" unique_id=731504300]
 offset_left = 312.0
-offset_top = 232.0
+offset_top = 223.0
 offset_right = 792.0
-offset_bottom = 459.0
+offset_bottom = 450.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_outline_size = 13
 theme_override_constants/shadow_offset_x = 6
@@ -162,9 +150,9 @@ vertical_alignment = 1
 
 [node name="Label" type="Label" parent="sort_instruct" unique_id=667973467]
 offset_left = 310.0
-offset_top = 152.0
+offset_top = 143.0
 offset_right = 805.0
-offset_bottom = 229.0
+offset_bottom = 220.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("9_akrjc")
 theme_override_font_sizes/font_size = 60

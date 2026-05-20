@@ -8,6 +8,16 @@
 [ext_resource type="Texture2D" uid="uid://boomir6ni2pib" path="res://Sprites/Plastics/dirty_red.png" id="6_jr67b"]
 [ext_resource type="Texture2D" uid="uid://co2fgtrqvj5i0" path="res://Sprites/Plastics/dirty_teal.png" id="7_8ek2f"]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6cfwg"]
+radius = 639.99994
+height = 1279.9999
+
 [node name="PlasticToSort" type="Sprite2D" unique_id=1084144945]
+scale = Vector2(0.05, 0.05)
 script = ExtResource("1_6cfwg")
 plastics_available = Array[Texture2D]([ExtResource("2_737je"), ExtResource("3_r2xkd"), ExtResource("4_qssyq"), ExtResource("5_lfp2a"), ExtResource("6_jr67b"), ExtResource("7_8ek2f")])
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1110150026]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=80638228]
+shape = SubResource("CapsuleShape2D_6cfwg")

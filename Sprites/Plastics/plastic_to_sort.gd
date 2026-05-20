@@ -21,10 +21,12 @@ func _physics_process(delta: float) -> void:
 func _input(event):
 	if event is InputEventMouseButton:
 		if event.pressed:
-			get_viewport().set_input_as_handled()
 			if get_rect().has_point(to_local(event.position)):
+				get_viewport().set_input_as_handled()
 				print("clicked pls work")
 				drags = true
 			else:
 				drags = false
 				print("it no work augh")
+		elif !event.pressed:
+			drags = false
