@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bkfj34wg0f412"]
 
-[ext_resource type="Texture2D" uid="uid://c6tk8o3yv1gqx" path="res://Characters/ch21.png" id="1_6y572"]
+[ext_resource type="Texture2D" uid="uid://c6tk8o3yv1gqx" path="res://Characters/IMG_1624.png" id="1_6y572"]
 [ext_resource type="Texture2D" uid="uid://bgdfi0m2v4n8l" path="res://Characters/ch2.png" id="2_h4x52"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_52vm4"]
@@ -26,8 +26,7 @@ scale = Vector2(0.17, 0.17)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=124494575]
 sprite_frames = SubResource("SpriteFrames_52vm4")
-frame = 1
-frame_progress = 0.9668879
+frame_progress = 0.65207684
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=190315580]
 position = Vector2(-1.1368684e-13, 94.11765)
