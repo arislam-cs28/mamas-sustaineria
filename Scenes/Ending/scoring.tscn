@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://5d6sixlbh4bw"]
+
+[ext_resource type="Script" uid="uid://bw88ljdrwypfq" path="res://Scenes/Ending/scoring.gd" id="1_e280s"]
+[ext_resource type="Texture2D" uid="uid://bnpqkrei27ixu" path="res://Sprites/Orders/IMG_1262.png" id="2_hp0gr"]
+[ext_resource type="Texture2D" uid="uid://u3k832rk7uya" path="res://Characters/reese_sykle.png" id="3_xge6n"]
+[ext_resource type="Texture2D" uid="uid://bdryt0l503t5p" path="res://Sprites/Misc/IMG_1600.png" id="4_ya55a"]
+[ext_resource type="Texture2D" uid="uid://b3otirs8uv85c" path="res://Sprites/Misc/IMG_1718.png" id="5_axaeb"]
+[ext_resource type="Texture2D" uid="uid://bu5cjrh38qet7" path="res://Sprites/Misc/IMG_1712.png" id="6_v3ep0"]
+[ext_resource type="FontFile" uid="uid://n5py003eqye6" path="res://Fonts/SpaceMono-Regular.ttf" id="7_hp0gr"]
+[ext_resource type="FontFile" uid="uid://cy1jcm8tofucl" path="res://Fonts/Silkscreen-Regular.ttf" id="7_t6g6a"]
+
+[node name="Scoring" type="Node2D" unique_id=1029759965]
+script = ExtResource("1_e280s")
+
+[node name="Img1262" type="Sprite2D" parent="." unique_id=2018784552]
+position = Vector2(576, 324)
+scale = Vector2(0.47662395, 0.38848922)
+texture = ExtResource("2_hp0gr")
+
+[node name="ReeseSykle" type="Sprite2D" parent="." unique_id=1164591537]
+position = Vector2(1024, 480)
+scale = Vector2(0.31290323, 0.3066663)
+texture = ExtResource("3_xge6n")
+
+[node name="Img1600" type="Sprite2D" parent="." unique_id=2035944643]
+position = Vector2(257.00696, 310.66943)
+rotation = 1.5707964
+scale = Vector2(0.23654525, 0.25634497)
+texture = ExtResource("4_ya55a")
+
+[node name="Img1718" type="Sprite2D" parent="." unique_id=1225906714]
+position = Vector2(664, 328)
+scale = Vector2(0.45714286, 0.39376011)
+texture = ExtResource("5_axaeb")
+
+[node name="star1" type="Sprite2D" parent="." unique_id=2109046067]
+position = Vector2(544, 160)
+scale = Vector2(0.06451611, 0.06451611)
+texture = ExtResource("6_v3ep0")
+
+[node name="star2" type="Sprite2D" parent="." unique_id=554092674]
+position = Vector2(656, 87.999985)
+scale = Vector2(0.06451611, 0.06451611)
+texture = ExtResource("6_v3ep0")
+
+[node name="star3" type="Sprite2D" parent="." unique_id=1719094661]
+position = Vector2(760, 159)
+scale = Vector2(0.06451611, 0.06451611)
+texture = ExtResource("6_v3ep0")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1086395534]
+anchors_preset = -1
+anchor_right = 0.24900001
+anchor_bottom = 1.1450001
+offset_left = 112.0
+offset_top = 176.0
+offset_right = 400.0
+offset_bottom = 520.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("7_hp0gr")
+theme_override_font_sizes/normal_font_size = 25
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="." unique_id=354303568]
+offset_left = 62.0
+offset_top = 42.0
+offset_right = 455.0
+offset_bottom = 194.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -10
+theme_override_fonts/font = ExtResource("7_t6g6a")
+theme_override_font_sizes/font_size = 36
+text = "Your STAR 
+Stats!"
+horizontal_alignment = 1
+vertical_alignment = 1
